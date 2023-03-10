@@ -102,10 +102,9 @@ body {
 }
 
 .skills {
-    background-color:#000000;
+    background-color: #0D1117;
     background-image: 
-    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%),
-    radial-gradient(at 100% 100%, hsla(225,39%,15%,1) 0, transparent 50%);
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%);
 }
 
 a {
@@ -114,14 +113,14 @@ a {
 }
 
 .welcome {
-    background-color:#000000;
+    background-color: #0D1117;
     background-image: 
     radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 50%), 
     radial-gradient(at 50% 0%, hsla(225,39%,25%,1) 0, transparent 50%);
 }
 
 .projects {
-    background-color:#000000;
+    background-color: #0D1117;
     background-image: 
     radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 50%), 
     radial-gradient(at 50% 0%, hsla(225,39%,25%,1) 0, transparent 50%);
@@ -135,14 +134,21 @@ a {
 
 
 .carousel {
-  width: 950px;
   margin: 5px;
   display: flex;
   justify-content: space-between;
 }
 
 .carousel .content {
-  padding: 10px 80px;
+  padding: 0px 45px;
   font-size: 50px;
+}
+
+
+
+
+.bottom__gradient {
+    background-image: 
+    radial-gradient(at 50% 100%, hsla(225,39%,25%,1) 0, transparent 50%);
 }
 
