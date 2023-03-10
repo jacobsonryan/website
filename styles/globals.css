@@ -1,3 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+font-family: 'Montserrat', sans-serif;
+ }
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -86,13 +95,17 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    /* background-color:#0d1117; */
+    /* background-image:  */
+    /* radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 50%),  */
+    /* radial-gradient(at 50% 0%, hsla(225,39%,25%,1) 0, transparent 50%); */
+}
+
+.skills {
+    background-color:#000000;
+    background-image: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(225,39%,15%,1) 0, transparent 50%);
 }
 
 a {
@@ -100,8 +113,36 @@ a {
   text-decoration: none;
 }
 
+.welcome {
+    background-color:#000000;
+    background-image: 
+    radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,25%,1) 0, transparent 50%);
+}
+
+.projects {
+    background-color:#000000;
+    background-image: 
+    radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,25%,1) 0, transparent 50%);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
+
+
+.carousel {
+  width: 950px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel .content {
+  padding: 10px 80px;
+  font-size: 50px;
+}
+
