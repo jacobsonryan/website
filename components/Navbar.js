@@ -30,7 +30,7 @@ export default function Navbar() {
           })}
         </div>
       </div>
-      <div className={`${open ? 'block' : 'hidden'} flex py-4 gap-2 px-9  flex-col `}>
+      <div className={`${open ? 'block' : 'hidden'} flex py-4 gap-2 px-9 flex-col text-right`}>
         {routes.map((route, index) => {
           return <Link key={index} className={`${router.pathname == route.link ? 'opacity-100' : 'opacity-50'}
           hover:opacity-100`} href={route.link} onClick={() => setOpen(false)} >{route.name}</Link>
