@@ -13,7 +13,7 @@ export default function Navbar() {
   const router = useRouter()
 
   return (
-    <nav className="fixed top-0 bg-slate-900 bg-opacity-30 backdrop-blur md:bg-opacity-0 md:backdrop-blur-[0] md:sticky">
+    <nav className="fixed top-0 bg-slate-900 bg-opacity-30 backdrop-blur md:bg-opacity-0 md:backdrop-blur-[0] md:sticky z-10">
       <div className=" w-screen flex justify-between items-center px-9 py-4 text-sm">
         <div className="font-extrabold uppercase text-xl">
           <h1>Ryan <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4CA5FF] to-[#B375F8]">Jacobson</span></h1>

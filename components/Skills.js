@@ -20,13 +20,12 @@ const jobs = [
 
 export default function Skills() {
   return (
-  <main className="flex justify-center items-center text-left flex-col ">
-    <div className="blob3"></div>
-    <div className="grid_bg absolute w-screen h-screen"></div>
-    <div className=" text-lg flex justify-center align-middle  divider-y-2">
-      <div className="flex justify-center flex-col align-middle items-center">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-none tracking-tight text-gray-900 lg:text-6xl dark:text-white">Welcome to <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4CA5FF] to-[#B375F8]">My Portfolio</span></h1>
-        <div className="flex w-[20%] sm:w-[60%] gap-16 mt-16 justify-center flex-wrap-reverse lg:flex-nowrap">
+    <main className="flex justify-center items-center text-left flex-col ">
+      <div className="blob3"></div>
+      <div className="grid_bg absolute w-screen h-screen"></div>
+        <div className="flex justify-center flex-col align-middle items-center">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-none tracking-tight text-gray-900 lg:text-6xl dark:text-white">Welcome to <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4CA5FF] to-[#B375F8]">My Portfolio</span></h1>
+          <div className="flex w-[20%] sm:w-[60%] gap-16 mt-16 justify-center flex-wrap-reverse lg:flex-nowrap">
             <div className="w-full">
               <ol class="relative ">                  
                 {jobs.map((job, index) => {
@@ -43,20 +42,16 @@ export default function Skills() {
                 })}
               </ol>
             </div>
-          {/* <div class="sm:w-2/4"> */}
-          {/*   <p className="text-lg  pt-4 font-mono text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> */}
-          {/* </div> */}
-      </div>
-        <div className=" w-[20%] sm:w-[30%] md:w-[40%] lg:w-[60%]">
-          <div className="flex justify-center items-center mt-16">
-          <div class="sm:flex-1 w-full h-[1px] dark:bg-gray-600 bg-[#D8E5FF]"></div>
-          <p class="font-normal flex-[1] ] mx-4 sm:py-0 py-4 text-center text-gray-400 text-sm lg:text-lg">Technologies I Use</p>
-          <div class="sm:flex-1 w-full h-[1px] dark:bg-gray-600 bg-[#D8E5FF]"></div>
           </div>
-          <Carousel />
-        </div>
-    </div>
-  </div>
-</main>
+          <div className="w-[20%] sm:w-[30%] md:w-[40%] lg:w-[60%]">
+            <div className="flex justify-center items-center mt-16">
+              <div class="sm:flex-1 w-full h-[1px] dark:bg-gray-600 bg-[#D8E5FF]"></div>
+                <p class="font-normal flex-[1] ] mx-4 sm:py-0 py-4 text-center text-gray-400 text-sm lg:text-lg">Technologies I Use</p>
+              <div class="sm:flex-1 w-full h-[1px] dark:bg-gray-600 bg-[#D8E5FF]"></div>
+            </div>
+            <Carousel />
+          </div>
+      </div>
+  </main>
   )
 }
