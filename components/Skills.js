@@ -1,45 +1,62 @@
-import Carousel from "./Carousel";
+import Carousel from "./Carousel"; 
+
+const jobs = [
+  {
+    title: 'Associate Software Engineer II',
+    date: 'January 2023',
+    company: 'JP Morgan Chase'
+  },
+  {
+    title: 'Analyst Software Engineer I',
+    date: 'December 2021 - January 2023',
+    company: 'JP Morgan Chase'
+  },
+  {
+    title: 'Software Engineer Intern',
+    date: 'June 2019 - December 2021',
+    company: 'JP Morgan Chase'
+  }
+]
 
 export default function Skills() {
   return (
-  <main className="flex skills justify-center items-center text-left flex-col ">
-    <div className=" w-screen h-screen md:h- text-lg flex justify-center align-middle items-center divider-y-2">
-      <div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{ease: "easeOut"}} className="flex justify-center flex-col align-middle items-center">
-        <h1 className="mb-1 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Welcome to <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4CA5FF] to-[#B375F8]">My Portfolio</span></h1>
-        <div className="flex w-[60%] gap-16 mt-32 justify-center">
-          <div className="w-2/4">
-            <p className="mb-3 font-light text-gray-500 dark:text-gray-400  text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel turpis vehicula, vulputate turpis at, cursus neque. Aliquam ex orci, tempor id tincidunt fermentum, porttitor quis neque. Nulla facilisi. Suspendisse tortor turpis, interdum in tellus eget, tincidunt faucibus orci. Ut bibendum justo at enim blandit euismod. Vivamus pharetra risus lacus, eget ornare lorem consectetur et. Nam et ex mauris. Suspendisse posuere rhoncus nisl, nec vulputate metus viverra ac. Nulla accumsan massa et pulvinar posuere. </p>
-          </div>
-            <div className="w-2/4">
-              <ol class="text-right relative">                  
-                  <li class="mb-10 ml-4">
-                      <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">January 2023 - Present</time>
-                      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Associate Software Engineer II</h3>
-                      <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">JP Morgan Chase</p>
-                  </li>
-                  <li class="mb-10 ml-4">
-                      <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">December 2021 - December 2022</time>
-                      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Analyst Software Engineer I</h3>
-                      <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">JP Morgan Chase</p>
-                  </li>
-                  <li class="ml-4">
-                      <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">June 2019 - December 2021</time>
-                      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Software Engineer Intern</h3>
-                      <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">JP Morgan Chase</p>
-                  </li>
+  <main className="flex justify-center items-center text-left flex-col ">
+    <div className="blob3"></div>
+    <div className="grid_bg absolute w-screen h-screen"></div>
+    <div className=" text-lg flex justify-center align-middle  divider-y-2">
+      <div className="flex justify-center flex-col align-middle items-center">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-none tracking-tight text-gray-900 lg:text-6xl dark:text-white">Welcome to <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4CA5FF] to-[#B375F8]">My Portfolio</span></h1>
+        <div className="flex w-[20%] sm:w-[60%] gap-16 mt-16 justify-center flex-wrap-reverse lg:flex-nowrap">
+            <div className="w-full">
+              <ol class="relative ">                  
+                {jobs.map((job, index) => {
+                  return (
+                    <li class="mb-6 ml-6 bg-gray-800 rounded-lg p-4 bg-opacity-30">            
+                        <span  class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                            <svg aria-hidden="true" class="w-3 h-3 text-blue-800 dark:text-blue-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                        </span>
+                        <h3 class="flex items-center mb-1 text-sm lg:text-lg font-semibold text-gray-900 dark:text-white">{job.title}<span style={{display: index == 0 ? 'block' : 'none'}}class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">Current</span></h3>
+                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{job.date}</time>
+                        <p class="mb-4 text-base text-sm lg:text-md font-normal text-gray-500 dark:text-gray-400">{job.company}</p>
+                    </li>
+                  )
+                })}
               </ol>
             </div>
-          </div>
-          <div className=" w-[60%]">
-            <div className="flex justify-center items-center ">
-            <div class="sm:flex-1 w-full h-[1px] dark:bg-gray-600 bg-[#D8E5FF]"></div>
-            <p class="font-normal flex-[.5] ] mx-4 sm:py-0 py-4 text-center">Tech I Use</p>
-            <div class="sm:flex-1 w-full h-[1px] dark:bg-gray-600 bg-[#D8E5FF]"></div>
-            </div>
-            <Carousel />
-          </div>
+          {/* <div class="sm:w-2/4"> */}
+          {/*   <p className="text-lg  pt-4 font-mono text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> */}
+          {/* </div> */}
       </div>
+        <div className=" w-[20%] sm:w-[30%] md:w-[40%] lg:w-[60%]">
+          <div className="flex justify-center items-center mt-16">
+          <div class="sm:flex-1 w-full h-[1px] dark:bg-gray-600 bg-[#D8E5FF]"></div>
+          <p class="font-normal flex-[1] ] mx-4 sm:py-0 py-4 text-center text-gray-400 text-sm lg:text-lg">Technologies I Use</p>
+          <div class="sm:flex-1 w-full h-[1px] dark:bg-gray-600 bg-[#D8E5FF]"></div>
+          </div>
+          <Carousel />
+        </div>
     </div>
-  </main>
+  </div>
+</main>
   )
 }
