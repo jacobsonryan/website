@@ -21,7 +21,6 @@ const jobs = [
 export default function Skills() {
   return (
     <main className="flex justify-center items-center text-left flex-col ">
-      <div className="blob3"></div>
       <div className="grid_bg absolute w-screen h-screen"></div>
         <div className="flex justify-center flex-col align-middle items-center">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-none tracking-tight text-gray-900 lg:text-6xl dark:text-white">Welcome to <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4CA5FF] to-[#B375F8]">My Portfolio</span></h1>

@@ -3,36 +3,36 @@ import prisma from "../lib/prisma"
 export default function Projects({ projects }) {
   return (
     <>
-      <div  className="projects">
-      <main className="h-full lg:h-screen"> 
-        <div className="flex flex-col justify-center items-center">
-        <div className="blob"></div>
-        <div className="grid_bg_proj absolute w-screen h-screen"></div>
-        <div className="grid_fade absolute w-screen h-screen"></div>
-        <h1 className="text-2xl md:text-3xl lg:text-6xl pb-32 font-extrabold mt-40 text-center">Personal Projects</h1>
-        <div className="flex flex-col justify-center items-center ">
-          <div className="grid grid-cols-1 gap-4 p-4 w-3/4 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1">
-            {projects.map((project, index) => {
-              return (
-                <div key={index} className={`bg-slate-900 h-56 bg-opacity-30 backdrop-blur-sm p-4  flex flex-col justify-between border border-gray-600 rounded-lg  ${project.id == 1 ? 'order-first' : 'order-last'}`}>
-                  <div>
-                    <p className="text-xl font-extrabold">{project.title}</p>
-                    <span className={`text-xs font-medium mr-2 px-2.5 py-0.5 rounded text-gray-100 border border-gray-600`}>{project.lang}</span>
-                    <p className="text-sm md:text-sm font-normal text-gray-400 sm:text-md">{project.description}</p>
-                  </div>
-                  <div className=" gap-4 flex flex-end">
-                      <a href={project.code} target="_blank" className="opacity-50 hover:opacity-100">Github</a>
-                      <a href={project.view} target="_blank" className="opacity-50 hover:opacity-100" style={{display: project.view != '' ? 'block' : 'none'}}>Demo</a>
-                  </div>
+      <div className="flex flex-col justify-center items-center">
+      <div className="grid_bg absolute w-screen h-screen"></div>
+      <div className="grid_fade absolute w-screen h-screen"></div>
+      <div className="blob2"></div>
+      <h1 className="text-2xl md:text-3xl lg:text-6xl pb-24 font-extrabold mt-40 text-center">Personal Projects</h1>
+        <div className="grid grid-cols-1 gap-4 p-4 w-3/4 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1">
+          {projects.map((project, index) => {
+            return (
+              <div key={index} className={`bg-slate-900 h-64 bg-opacity-30 backdrop-blur-sm flex flex-col justify-between ring-1 ring-slate-100/10 rounded-lg  ${project.id == 1 ? 'order-first' : 'order-last'}`}>
+                <div className="flex gap-2 align-middle items-center px-4 pt-4">
+                  <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-2.5 w-auto stroke-slate-500/30">
+                    <circle cx="5" cy="5" r="4.5"></circle>
+                    <circle cx="21" cy="5" r="4.5"></circle>
+                    <circle cx="37" cy="5" r="4.5"></circle></svg>
                 </div>
-              )
-            })}
-          </div>
+                <div className="p-4 pt-2 flex flex-col flex-start grow">
+                  <p className="text-md md:text-xl pb-1 text-slate-100 font-semibold">{project.title}</p>
+                  <span className={`text-xs w-min font-medium mr-2 px-2.5 p-0.5 rounded text-slate-100 ring-1 ring-slate-100/10`}>{project.lang}</span>
+                  <p className="text-sm  md:text-sm font-normal text-slate-400 sm:text-md pt-1">{project.description}</p>
+                </div>
+                <div className="p-4 gap-4 flex flex-end">
+                    <a href={project.code} target="_blank" className="text-slate-400 hover:text-slate-100">Github</a>
+                    <a href={project.view} target="_blank" className="text-slate-400 hover:text-slate-100" style={{display: project.view != '' ? 'block' : 'none'}}>Demo</a>
+                </div>
+              </div>
+            )
+          })}
         </div>
-          </div>
-      </main>
-      </div>    
-      </>
+      </div>
+    </>
   )
 }
 

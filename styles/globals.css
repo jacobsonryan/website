@@ -142,16 +142,9 @@ a {
 
 .grid_bg {
   top: 0;
-  opacity: 0.02;
+  opacity: 0.04;
   background-image:  linear-gradient(#ffffff80 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(to right, #ffffff80 1.4000000000000001px, #e5e5f700 1.4000000000000001px);
-  background-size: 28px 28px;
-  z-index: -2;
-}
-.grid_bg_proj {
-  top: 0;
-  opacity: 0.03;
-  background-image:  linear-gradient(#ffffff80 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(to right, #ffffff80 1.4000000000000001px, #e5e5f700 1.4000000000000001px);
-  background-size: 28px 28px;
+  background-size: 30px 30px;
   z-index: -2;
 }
 .grid_fade {
@@ -167,8 +160,19 @@ a {
   position: absolute;
   z-index: -2;
   background-image: url(../assets/bg.jpg);
-  background-size: cover;
+  background-size: 1378px;
   background-position: center center;
+  background-repeat: no-repeat;
+}
+.blob2 {
+  top: 0px;
+  width:2000px;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  background-image: url(../assets/bg.png);
+  background-size: 2264px 100%;
+  background-position: center 0;
   background-repeat: no-repeat;
 }
 
@@ -189,3 +193,7 @@ a {
 /*   opacity: 0.3; */
 /*   transform: rotate(-40deg) */
 /* } */
+
+
+
+
