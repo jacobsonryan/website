@@ -1,15 +1,7 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Skills from '@/components/Skills'
-import React, { useRef } from 'react'
 
 export default function Home() {
-  const titleRef = useRef();
-
-  function handleClick() {
-    titleRef.current.scrollIntoView({ behavior: "smooth" });
-  }
-
   return (
     <>
       <Head>
@@ -18,22 +10,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <main className="flex justify-center items-center text- flex-col">
-        <div className=" w-screen h-screen md:h- text-lg flex justify-center align-middle items-center">
-          <div className="flex justify-around w-[75%] gap-4 flex-row align-middle items-center">
-          <div className="blob"></div>
-          <div className="grid_fade absolute w-screen h-screen"></div>
-            <div className="lg:mb-[140px] lg:pl-[100px]">
-              <h2 className=" font-semibold text-blue-400">Welcome to the web portfolio of</h2>
+        <div className="blob"></div>
+        <div className="grid_bg absolute w-screen h-screen"></div>
+        <div className="grid_fade absolute w-screen h-screen"></div>
+        <div className="h-screen w-screen h-screen flex items-center justify-center">
+          <div className="text-lg lg:mb-[140px] text-left w-[65%]">
+              <h2 className=" font-semibold text-blue-500">Welcome to the web portfolio of</h2>
               <h1 className="text-5xl font-extrabold leading-none tracking-tight text-gray-900 md:text-7xl lg:text-8xl dark:text-white mt-8">Ryan<br></br> <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4CA5FF] to-[#c0d9fa]">Jacobson</span></h1>
-              <p className="text-md md:text-md w-100 md:w-[55%] text-slate-400 mt-8 leading-relaxed ">"Welcome to my portfolio website, where you can discover my expertise in web development. From responsive design to seamless functionality, I'm dedicated to delivering websites that enhance your digital presence. I'm excited to showcase my work and connect with you about your next project." -ChatGPT</p>
-            </div>
+              <p className="text-md md:text-md w-100 md:w-[75%] text-slate-400 mt-8 leading-relaxed ">Welcome to my portfolio website, where you can discover my expertise in web development. From responsive design to seamless functionality, I'm dedicated to delivering websites that enhance your digital presence. I'm excited to showcase my work and connect with you about your next project.</p>
           </div>
         </div>
-        </main>
-      <div ref={titleRef}>
-        <Skills />
-      </div>
+        <div>
+          <Skills />
+        </div>
     </>
   )
 }
