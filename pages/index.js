@@ -15,9 +15,9 @@ export default function Home() {
         <div className="grid_fade absolute w-screen h-screen"></div>
         <div className="h-screen w-screen h-screen flex items-center justify-center">
           <div className="text-lg lg:mb-[140px] text-left w-[65%]">
-              <h2 className=" font-semibold text-blue-500">Welcome to the web portfolio of</h2>
+              <h2 className="text-sm md:text-lg font-semibold text-blue-500">Welcome to the web portfolio of</h2>
               <h1 className="text-5xl font-extrabold leading-none tracking-tight text-gray-900 md:text-7xl lg:text-8xl dark:text-white mt-8">Ryan<br></br> <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4CA5FF] to-[#c0d9fa]">Jacobson</span></h1>
-              <p className="text-md md:text-md w-100 md:w-[75%] text-slate-400 mt-8 leading-relaxed ">Welcome to my portfolio website, where you can discover my expertise in web development. From responsive design to seamless functionality, I'm dedicated to delivering websites that enhance your digital presence. I'm excited to showcase my work and connect with you about your next project.</p>
+              <p className="text-sm md:text-lg w-100 md:w-[75%] text-slate-400 mt-8 leading-relaxed ">Welcome to my portfolio website, where you can discover my expertise in web development. From responsive design to seamless functionality, I'm dedicated to delivering websites that enhance your digital presence. I'm excited to showcase my work and connect with you about your next project.</p>
           </div>
         </div>
         <div>
