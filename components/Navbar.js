@@ -13,10 +13,10 @@ export default function Navbar() {
   const router = useRouter()
 
   return (
-    <nav className="fixed top-0 bg-slate-900 bg-opacity-30 backdrop-blur md:bg-opacity-0 md:backdrop-blur-[0] md:sticky z-10">
-      <div className=" w-screen flex justify-between items-center px-9 py-4 text-sm">
+    <nav className="sticky top-0 bg-[#16181D] backdrop-blur md:bg-opacity-0 md:backdrop-blur-[0] md:sticky border-b border-zinc-700">
+      <div className=" w-screen flex justify-between items-center px-9 py-6 text-sm noisy">
         <div className="font-extrabold uppercase text-xl">
-          <h1>R<span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4CA5FF] to-[#c0d9fa]">J</span></h1>
+          <h1>R<span className="font-extrabold text-[#5954E5]"> J</span></h1>
         </div>
         <div className="cursor-pointer block md:hidden" onClick={() => setOpen(!open)}>
           <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="invert">
@@ -25,15 +25,15 @@ export default function Navbar() {
         </div>
         <div className="gap-9 md:flex hidden font-semibold">
           {routes.map((route, index) => {
-            return <Link key={index} className={`${router.pathname == route.link ? 'text-slate-100' : 'text-slate-400'}
-            hover:text-slate-100`} href={route.link}>{route.name}</Link>
+            return <Link key={index} className={`${router.pathname == route.link ? 'text-white' : 'text-gray-400'}
+            hover:text-white`} href={route.link}>{route.name}</Link>
           })}
         </div>
       </div>
-      <div className={`${open ? 'block' : 'hidden'} flex py-4 gap-2 px-9 flex-col text-right`}>
+      <div className={`${open ? 'block' : 'hidden'} md:hidden absolute flex py-6 gap-6 px-9 flex-col text-left w-screen z-1 noisy`}>
         {routes.map((route, index) => {
-          return <Link key={index} className={`${router.pathname == route.link ? 'opacity-100' : 'opacity-50'}
-          hover:opacity-100`} href={route.link} onClick={() => setOpen(false)} >{route.name}</Link>
+          return <Link key={index} className={`${router.pathname == route.link ? 'text-white' : 'text-gray-400'}
+          hover:text-white`} href={route.link} onClick={() => setOpen(false)} >{route.name}</Link>
         })}
       </div>
     </nav>

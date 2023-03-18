@@ -10,19 +10,26 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <div className="blob"></div>
+        <div className="blob3"></div>
+        <section className="noisy h-screen w-screen flex items-center justify-center">
         <div className="grid_bg absolute w-screen h-screen"></div>
         <div className="grid_fade absolute w-screen h-screen"></div>
-        <div className="h-screen w-screen h-screen flex items-center justify-center">
-          <div className="text-lg lg:mb-[140px] text-left w-[65%]">
-              <h2 className="text-sm md:text-lg font-semibold text-blue-500">Welcome to the web portfolio of</h2>
-              <h1 className="text-5xl font-extrabold leading-none tracking-tight text-gray-900 md:text-7xl lg:text-8xl dark:text-white mt-8">Ryan<br></br> <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4CA5FF] to-[#c0d9fa]">Jacobson</span></h1>
-              <p className="text-sm md:text-lg w-100 md:w-[75%] text-slate-400 mt-8 leading-relaxed ">Welcome to my portfolio website, where you can discover my expertise in web development. From responsive design to seamless functionality, I'm dedicated to delivering websites that enhance your digital presence. I'm excited to showcase my work and connect with you about your next project.</p>
+          <div className="text-lg lg: text-left w-[90%] sm:w-[65%] mb-[150px] ">
+              <h2 className="text-sm md:text-lg font-semibold">Welcome to the <span className="text-[#5954E5]">web portfolio </span>of</h2>
+              <h1 className="text-5xl font-semibold leading-none tracking-tight md:text-7xl lg:text-8xl">Ryan<br></br>
+              <span className="text-[#5954E5]">Jacobson</span></h1>
+              <p className="text-sm md:text-lg w-100 md:w-[75%] leading-relaxed text-gray-400">Welcome to my portfolio website, where you can discover my expertise in web development. From responsive design to seamless functionality, I'm dedicated to delivering websites that enhance your digital presence. I'm excited to showcase my work and connect with you about your next project.</p>
+              <div className="flex gap-4 mt-4  text-sm">
+                <a href="#" class="flex items-center bg-[#5954E5]  px-4 py-2">Projects 
+                  <svg aria-hidden="true" class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="#" class="flex items-center">Github 
+                  <svg aria-hidden="true" class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+              </div>
           </div>
-        </div>
-        <div>
-          <Skills />
-        </div>
+        </section>
+        <Skills />
     </>
   )
 }

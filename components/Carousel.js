@@ -10,14 +10,14 @@ import node from '../assets/node.svg'
 import cypress from '../assets/cypress.svg'
 
 const icons = [
- {  name: html, height: 75 },
- {  name: mongo, height: 75 },
- {  name: next, height: 125 },
- {  name: node, height: 75 },
- {  name: css, height: 75 },
- {  name: react, height: 75 },
- {  name: tailwind, height: 125 },
- {  name: cypress, height: 50 },
+ {  name: html, height: 65 },
+ {  name: mongo, height: 65 },
+ {  name: next, height: 115 },
+ {  name: node, height: 65 },
+ {  name: css, height: 65 },
+ {  name: react, height: 65 },
+ {  name: tailwind, height: 115 },
+ {  name: cypress, height: 40 },
 ]
 
 export default function Carousel() {

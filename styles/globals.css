@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'); */
 
 /* * { */
@@ -95,14 +96,10 @@ body {
 }
 
 body {
-  background-color: #0B1120
+  background-color: #16181D
 }
 
-.skills {
-    background-color: #0D1117;
-    background-image: 
-    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%);
-}
+
 
 a {
   color: inherit;
@@ -116,7 +113,7 @@ a {
 }
 
 /* .projects { */
-/*     background-color: #0D1117; */
+/*     background-color: #16181D; */
 /*     background-image:  */
 /*     radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 50%),  */
 /*     radial-gradient(at 50% 0%, hsla(225,39%,25%,1) 0, transparent 50%); */
@@ -143,23 +140,23 @@ a {
 .grid_bg {
   top: 0;
   opacity: 0.04;
-  background-image:  linear-gradient(#ffffff80 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(to right, #ffffff80 1.4000000000000001px, #e5e5f700 1.4000000000000001px);
-  background-size: 30px 30px;
+  background-image:  linear-gradient(#ffffff 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(to right, #ffffff 1.4000000000000001px, #e5e5f700 1.4000000000000001px);
+  background-size: 20px 20px;
   z-index: -2;
 }
 .grid_fade {
   top: 0;
-  background: linear-gradient(180deg, #0B1120 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, #0B1120 100%);
-  z-index: -1;
+  background: linear-gradient(180deg, #16181D 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%, #16181D 100%);
+  z-index: -2;
 }
 
 .blob {
-  top: 0px;
+  top: -270px;
   width:2000px;
   height: 100%;
   position: absolute;
   z-index: -2;
-  background-image: url(../assets/bg.jpg);
+  background-image: url(../assets/bg4.png);
   background-size: 1378px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -168,17 +165,19 @@ a {
   top: 0px;
   width:2000px;
   height: 100%;
+  opacity: 0.7;
   position: absolute;
-  z-index: -2;
+  z-index: -3;
   background-image: url(../assets/bg.png);
   background-size: 2264px 100%;
   background-position: center 0;
   background-repeat: no-repeat;
 }
 .blob3 {
-  left: 0;
+  right: 100px;
+  bottom: 150px;
   width:2000px;
-  height: 60%;
+  height: 70%;
   position: absolute;
   z-index: -2;
   background-image: url(../assets/bg2.png);
@@ -189,6 +188,29 @@ a {
   background-repeat: no-repeat;
 }
 
+.noisy {
+  position: relative;
+}
+.noisy::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  opacity: 0.3;
+  background: transparent url('../assets/noise.png') repeat 0 0;
+  background-repeat: repeat;
+  visibility: visible;
+  z-index: -1;
+} 
+
+/* section { */
+/* content: ""; */
+/*   h */
+/* top: 0%; */
+/* background: url(/assets/noise.webp) repeat,linear-gradient(83.21deg,#3245ff 0%,#bc52ee 100%); */
+/* } */
 
 
 

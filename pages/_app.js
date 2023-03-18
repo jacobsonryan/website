@@ -1,13 +1,13 @@
+import { UserProvider } from '@auth0/nextjs-auth0/client';
 import Layout from "../components/Layout"
 import '@/styles/globals.css'
-import { AnimatePresence } from "framer-motion"
 
 export default function App({ Component, pageProps, router }) {
   return (
-    <Layout>
-      <AnimatePresence mode={"wait"} initial={false}>
+    <UserProvider>
+      <Layout>
         <Component key={router.pathname} {...pageProps} />
-      </AnimatePresence>
-    </Layout>
+      </Layout>
+    </UserProvider>
   )
 }

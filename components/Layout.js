@@ -1,7 +1,7 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] })
+import { Raleway } from 'next/font/google'
+const inter = Raleway({ subsets: ['latin'] })
 
 export default function Layout({ children }) {
   return (
