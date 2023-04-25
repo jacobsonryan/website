@@ -8,6 +8,21 @@
 /*   font-family: 'Inter', sans-serif; */
 /*  } */
 
+/* ::selection { */
+/*   background: #1e40af;  */
+/* } */
+
+
+code {
+  tab-size: 0px;
+}
+
+ @media screen and (min-width: 640px) {
+  code {
+    tab-size: 15px;
+  }
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -92,14 +107,17 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+}
+
+html {
+  scroll-behavior: smooth!important;
 }
 
 body {
-  background-color: #16181D
+  background-color: black;
+  overflow-x: hidden;
 }
-
-
 
 a {
   color: inherit;
@@ -113,7 +131,7 @@ a {
 }
 
 /* .projects { */
-/*     background-color: #16181D; */
+/*     background-color: black; */
 /*     background-image:  */
 /*     radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 50%),  */
 /*     radial-gradient(at 50% 0%, hsla(225,39%,25%,1) 0, transparent 50%); */
@@ -127,90 +145,178 @@ a {
 
 
 .carousel {
-  margin: 5px;
+  margin: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .carousel .content {
-  padding: 0px 45px;
+  padding: 0px 50px;
   font-size: 50px;
 }
 
 .grid_bg {
   top: 0;
-  opacity: 0.04;
+  opacity: 0.05;
   background-image:  linear-gradient(#ffffff 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(to right, #ffffff 1.4000000000000001px, #e5e5f700 1.4000000000000001px);
-  background-size: 20px 20px;
+  background-size: 25px 25px;
   z-index: -2;
 }
 .grid_fade {
   top: 0;
-  background: linear-gradient(180deg, #16181D 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%, #16181D 100%);
+  background: linear-gradient(180deg, black 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%, black 100%);
   z-index: -2;
 }
 
-.blob {
-  top: -270px;
-  width:2000px;
-  height: 100%;
-  position: absolute;
-  z-index: -2;
-  background-image: url(../assets/bg4.png);
-  background-size: 1378px;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.blob2 {
-  top: 0px;
-  width:2000px;
-  height: 100%;
-  opacity: 0.7;
-  position: absolute;
-  z-index: -3;
-  background-image: url(../assets/bg.png);
-  background-size: 2264px 100%;
-  background-position: center 0;
-  background-repeat: no-repeat;
-}
-.blob3 {
-  right: 100px;
-  bottom: 150px;
-  width:2000px;
-  height: 70%;
-  position: absolute;
-  z-index: -2;
-  background-image: url(../assets/bg2.png);
-  opacity: 0.5;
-    filter: blur(20px);
-  background-size: 2264px 100%;
-  background-position: center 0;
-  background-repeat: no-repeat;
-}
 
 .noisy {
   position: relative;
 }
-.noisy::before {
-  content: "";
+/* .noisy::before { */
+/*   content: ""; */
+/*   position: absolute; */
+/*   top: 0;  */
+/*   left: 0; */
+/*   width: 100%;  */
+/*   height: 100%; */
+/*   opacity: 0.3; */
+/*   background: transparent url('../assets/noise.png') repeat 0 0; */
+/*   background-repeat: repeat; */
+/*   visibility: visible; */
+/*   z-index: -1; */
+/* }  */
+
+.glow {
+      text-shadow: 0 0 20px #ffffff50;
+}
+
+
+.proj-btn, .gh-btn  {
+  background-color: black;
+  color: white;
+  border: 1px solid #ffffff40;
+  padding: 12px 10px;
+  width: 175px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+}
+.gh-btn {
+  color: white;
+  border: none;
+}
+
+.gh-glow {
+      box-shadow: -5px -5px 50px #9333ea50, 5px 5px 50px #2563eb50;
+}
+
+.proj-btn:hover  {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+}
+
+.sep {
+  margin: 0 auto;
+  width: 1px;
+  content:"";
   position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
-  opacity: 0.3;
-  background: transparent url('../assets/noise.png') repeat 0 0;
-  background-repeat: repeat;
-  visibility: visible;
-  z-index: -1;
-} 
-
-/* section { */
-/* content: ""; */
-/*   h */
-/* top: 0%; */
-/* background: url(/assets/noise.webp) repeat,linear-gradient(83.21deg,#3245ff 0%,#bc52ee 100%); */
-/* } */
+  bottom: 0;
+  right: 50%;
+  left: 50%;
+  background:
+    repeating-linear-gradient(to bottom,transparent 0 4px,#ffffff30 4px 6px) 80%/2px 100% no-repeat;
+}
 
 
+.url {
+  margin: 0 auto;
+}
 
+
+.sep2 {
+  margin: 0 auto;
+  width: 1px;
+  content:"";
+  position: absolute;
+  bottom: 0;
+  top: 0px;
+  height: 137.5px;
+  right: 50%;
+  left: 50%;
+  background: rgb(13,17,23);
+  background-repeat: no-repeat;
+  background: linear-gradient(180deg, rgba(13,17,23,0) 0%, rgba(255,255,255,.3) 100%);
+}
+
+.sep3 {
+  margin: 0 auto;
+  width: 1px;
+  content:"";
+  position: absolute;
+  bottom: 0;
+  top: 137.5px;
+  height: 137.5px;
+  right: 50%;
+  left: 50%;
+  background: rgb(13,17,23);
+  background-repeat: no-repeat;
+  background: linear-gradient(0deg, rgba(13,17,23,0) 0%, rgba(255,255,255,.3) 100%);
+}
+.timeline {
+  left: 50%;
+  margin-left:-5px;
+}
+
+.nav {
+  position: sticky;
+  top: 0px;
+}
+
+.experience-dot {
+  box-shadow: 0px 0px 20px 5px #4f46e590;
+}
+
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 2.4s;
+    animation-delay: 2.4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #1f2937;
+    background: linear-gradient(to right, #111111 8%, #ffffff20 25%, #111111 38%);
+    background-size: 1000px 104px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.animated-background2 {
+    animation-duration: 2.4s;
+    animation-delay: 3.1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #1f2937;
+    background: linear-gradient(to right, #111111 8%, #ffffff20 25%, #111111 38%);
+    background-size: 1000px 104px;
+    position: relative;
+    overflow: hidden;
+}

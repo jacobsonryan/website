@@ -1,11 +1,11 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { Raleway } from 'next/font/google'
-const inter = Raleway({ subsets: ['latin'] })
+import { Inter } from 'next/font/google'
+const urbanist = Inter({ subsets: ['latin'] })
 
 export default function Layout({ children }) {
   return (
-    <div className={inter.className}>
+    <div className={urbanist.className}>
       <Navbar />
       {children}
       <Footer />

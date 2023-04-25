@@ -1,0 +1,65 @@
+import Carousel from "./Carousel"; 
+
+const jobs = [
+  {
+    title: 'Associate Software Engineer II',
+    date: 'January 2023',
+    company: 'JP Morgan Chase'
+  },
+  {
+    title: 'Analyst Software Engineer I',
+    date: 'December 2021 - January 2023',
+    company: 'JP Morgan Chase'
+  },
+  {
+    title: 'Software Engineer Intern',
+    date: 'June 2019 - December 2021',
+    company: 'JP Morgan Chase'
+  }
+]
+
+export default function Skills() {
+  return (
+      <section className="flex noisy skills justify-center items-center text-left flex-col border-t  border-zinc-700 ">
+        <div className="flex w-[90%] sm:w-[65%] gap-16 flex-col  justify-center  lg:flex-nowrap">
+          <div className="">
+            <h2 className="mt-10 font-semibold bg-gradient-to-r from-sky-400 to-sky-200 text-2xl bg-clip-text font-display tracking-tight text-transparent align-left text-left mb-10">About Me</h2>
+            <p className="text-sm md:text-lg w-100 md:w-[75%] text-slate-400 leading-relaxed ">Hi there! My name is Ryan Jacobson, and I'm a software engineer currently working at JP Morgan Chase. I have a true passion for development, and I'm always eager to learn and grow my skillset. My goal as a developer is to create solutions that are efficient, effective, and user-friendly. When I'm not coding, I love to spend my free time exploring new technologies and brainstorming innovative ideas. If you're looking for a dedicated and enthusiastic software engineer, then look no further than me!</p>
+          </div>
+          <div>
+            <h2 className="mt-10 font-semibold bg-gradient-to-r from-sky-400 to-sky-200 text-2xl bg-clip-text font-display tracking-tight text-transparent align-left text-left mb-10">Experience</h2>
+            <div className="flex flex-col">
+              <ol class="relative flex sm:flex-row flex-col justify-between w-full">                  
+                {jobs.map((job) => {
+                  return (
+                    <div>
+                      <div class=" -top-px left-20 right-11 h-px bg-gradient-to-r  from-sky-300/0 via-sky-300/70 to-sky-300/0"></div>
+                      <li class="bg-opacity-30 w-96 p-4 ring-1 ring-slate-100/10 rounded-lg">            
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="url(#my-cool-gradient)" class="w-9 h-9">
+                          <defs>
+                            <linearGradient id="my-cool-gradient" x2="1" y2="1">
+                              <stop offset="0%" stop-color="#38bdf8" />
+                              <stop offset="100%" stop-color="#7dd3fc" />
+                            </linearGradient>
+                          </defs>
+                          <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd" />
+                        </svg>
+                        <h3 class="flex items-center my-4 text-sm lg:text-lg font-semibold text-slate-100">{job.title}</h3>
+                        <time class="block mb-4 text-sm font-normal leading-none text-slate-400">{job.date}</time>
+                        <p class="mb-4 text-base text-sm lg:text-md font-normal text-slate-600">{job.company}</p>
+                      </li>
+                    <div class=" -bottom-px left-11 right-20 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0"></div>
+                    </div>
+                  )
+                }).reverse()}
+              </ol>
+            </div>
+            <div>
+            <h2 className="mt-10 font-semibold bg-gradient-to-r from-sky-400 to-sky-200 text-2xl bg-clip-text font-display tracking-tight text-transparent align-left text-left mb-10">Technical Skills</h2>
+              <Carousel />
+            </div>
+          </div>
+        </div>
+    </section>
+  )
+}
