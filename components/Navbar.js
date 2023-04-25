@@ -45,7 +45,7 @@ export default function Navbar() {
           })}
         </div>
       </div>
-      <div className={`${open ? 'block' : 'hidden'} bg-black bg-opacity-20 backdrop-blur absolute md:hidden  flex py-6 gap-6 px-9 flex-col text-left right-1 top-[65px] ring-1 ring-slate-100/10  z-10`}>
+      <div className={`${open ? 'block' : 'hidden'} bg-black bg-opacity-20 backdrop-blur absolute md:hidden  flex py-6 gap-6 px-9 flex-col text-left right-1 top-[65px] rounded-md ring-1 ring-slate-100/10  z-10`}>
         {routes.map((route, index) => {
           return <Link key={index} className={`${router.asPath.substring(1) == route.link ? 'text-white' : 'text-gray-400'}
           hover:text-white`} href={route.link} onClick={() => setOpen(false)} >{route.name}</Link>

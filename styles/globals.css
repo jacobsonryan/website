@@ -17,6 +17,23 @@ code {
   tab-size: 0px;
 }
 
+.custom-file-upload {
+  background-color: black;
+  color: white;
+  border: 1px solid #ffffff40;
+  padding: 12px 10px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+}
+input[type="file"] {
+    display: none;
+}
+
+
  @media screen and (min-width: 640px) {
   code {
     tab-size: 15px;

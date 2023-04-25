@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
         <section className="noisy h-screen w-screen flex items-center justify-center">
           <div className="text-lg lg: text-center w-[90%] md:w-[60%] mb-[150px] ">
-              <h2 className="text-md align-center md:text-xl mb-8">Welcome to the <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 ">web portfolio </span>of</h2>
+              <h2 className="text-md align-center md:text-xl mb-8">Welcome to the <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 font-semibold ">web portfolio </span>of</h2>
               <h1 className="text-8xl font-extrabold leading-none tracking-tight md:text-7xl lg:text-9xl mb-8">Ryan<br></br>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Jacobson</span></h1>
               <p className="text-md md:text-xl w-100 text-gray-400">Welcome to my portfolio website, where you can discover my expertise in web development. From responsive design to seamless functionality, I'm dedicated to delivering websites that enhance your digital presence. I'm excited to showcase my work and connect with you about your next project.</p>
