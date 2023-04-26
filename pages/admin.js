@@ -99,7 +99,7 @@ export default function Admin() {
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           <h2 className="mt-20 font- text-5xl font-extrabold align-left text-center "><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">New Project</span></h2>
-          <div className="flex flex-col gap-6  w-[90%]">
+          <div className="flex text-white flex-col gap-6  w-[90%]">
             <div className="flex flex-col mt-20">
               <label for="title">Project Title</label>
               <input name="title" className="bg-black ring-1 ring-slate-100/10 rounded-md p-2 mt-2 outline-none" value={title} onChange={(e) => setTitle(e.target.value)} />
