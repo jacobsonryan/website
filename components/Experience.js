@@ -40,7 +40,7 @@ export default function Experience() {
               <div className="relative flex lg:flex-col flex-col justify-between my-4 md:my-4 lg:my-0">
               <div className={`sep absolute ${i == 2 ? 'top-[137.5px]' : 'top-0'} ${i == 0 ? ' h-[137.5px]' : ''} hidden sm:block`}></div>
               <div className={`sep2 absolute ${i !== 2 ? 'opacity-0' : 'opacity-1'}`}></div>
-              <div className={`sep3 absolute ${i !== 0 ? 'opacity-0' : 'opacity-1'}`}></div>
+              <div className={`sep3 absolute ${i !== 0 ? 'opacity-0' : 'opacity-1'} hidden sm:block`}></div>
                 {/* <div class=" -top-px left-20 right-11 h-px bg-gradient-to-r  from-blue-500/0 via-blue-500 to-teal-500/0"></div> */}
                 <li class={`bg-opacity-0 experience   backdrop-blur-lg bg-gray-800  ring-1 lg:w-[45%] w-full ring-slate-100/10 rounded-md sm:h-[275px] h-[200px] ${i == 1 ? 'sm:self-end' : 'sm:self start'} self-start`}>            
                   <div className="flex gap-2 align-middle items-center border-b border-[#ffffff20] px-4">
