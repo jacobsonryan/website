@@ -117,19 +117,19 @@ export default function Admin() {
             </div>
             <div className="flex flex-col">
               <label for="language">Language</label>
-              <input name="language" className="bg-black ring-1 ring-slate-100/10 rounded-md p-2 mt-2 outline-none" value={lang} onChange={(e) => setLang(e.target.value)}/>
+              <input name="language" className="bg-black border-[1px] border-slate-100/10 rounded-md p-2 mt-2 outline-none" value={lang} onChange={(e) => setLang(e.target.value)}/>
             </div>
             <div className="flex flex-col">
               <label for="description">Description</label>
-              <textarea name="description" className="bg-black ring-1 ring-slate-100/10 rounded-md p-2 mt-2 outline-none" value={desc} onChange={(e) => setDesc(e.target.value)}/>
+              <textarea name="description" className="bg-black border-[1px] border-slate-100/10 rounded-md p-2 mt-2 outline-none" value={desc} onChange={(e) => setDesc(e.target.value)}/>
             </div>
             <div className="flex flex-col">
               <label for="repo">Github Repo</label>
-              <input name="repo" className="bg-black ring-1 ring-slate-100/10 rounded-md p-2 mt-2 outline-none" value={repo} onChange={(e) => setRepo(e.target.value)}/>
+              <input name="repo" className="bg-black border-[1px] border-slate-100/10 rounded-md p-2 mt-2 outline-none" value={repo} onChange={(e) => setRepo(e.target.value)}/>
             </div>
             <div className="flex flex-col">
               <label for="demo">Demo</label>
-              <input name="demo" className="bg-black ring-1 ring-slate-100/10 rounded-md p-2 mt-2 outline-none" value={demo} onChange={(e) => setDemo(e.target.value)}/>
+              <input name="demo" className="bg-black border-[1px] border-slate-100/10 rounded-md p-2 mt-2 outline-none" value={demo} onChange={(e) => setDemo(e.target.value)}/>
             </div>
           </div>
           <div className="flex justify-center m-16">
