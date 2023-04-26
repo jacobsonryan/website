@@ -102,7 +102,7 @@ export default function Admin() {
           <div className="flex text-white flex-col gap-6  w-[90%]">
             <div className="flex flex-col mt-20">
               <label for="title">Project Title</label>
-              <input name="title" className="bg-black ring-1 ring-slate-100/10 rounded-md p-2 mt-2 outline-none" value={title} onChange={(e) => setTitle(e.target.value)} />
+              <input name="title" className="bg-black border-[1px] border-slate-100/10 rounded-md p-2 mt-2 outline-none" value={title} onChange={(e) => setTitle(e.target.value)} />
             </div>
             <div className="flex flex-col">
               <label for="language">Language</label>
