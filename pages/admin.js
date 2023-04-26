@@ -45,6 +45,17 @@ export default function Admin() {
     })
   }
 
+  const openModal = () => {
+    setHidden(false)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeModal = () => {
+    setHidden(true)
+    document.body.style.overflow = 'auto'
+
+  }
+
   return (
     <>
       <Head>
@@ -53,10 +64,10 @@ export default function Admin() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex justify-center place-items-center flex-col ">
+      <div className="flex justify-center place-items-center flex-col">
           <ResumeUpload />
         <div className="grid grid-cols-1 gap-4 p-4 w-[90%] md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 ">
-          <div className={`bg-gray-800 h-64 bg-opacity-0 backdrop-blur-lg border-dashed border-[1px] border-slate-100/10 transition-all duration-100 hover:border-[#333333] ring-slate-100/10 rounded-md order-first cursor-pointer `} onClick={() => setHidden(false)}>
+          <div className={`bg-gray-800 h-64 bg-opacity-0 backdrop-blur-lg border-dashed border-[1px] border-slate-100/10 transition-all duration-100 hover:border-[#333333] ring-slate-100/10 rounded-md order-first cursor-pointer `} onClick={() => openModal()}>
             <div className="flex gap-2 align-middle items-center px-4 pt-4">
               <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-2.5 w-auto stroke-slate-500/30">
                 <circle cx="5" cy="5" r="4.5"></circle>
@@ -94,12 +105,12 @@ export default function Admin() {
             )
           })}
           </div>
-          <div id="defaultModal" tabindex="-1" aria-hidden="true" class={`${hidden ? 'hidden' : 'block'} fixed bg-[#00000090] justify-center flex flex-col items-center backdrop-blur rounded-md  top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%)] max-h-full`}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-10 h-10 absolute right-4 top-4 cursor-pointer" onClick={() => setHidden(true)}>
+          <div id="defaultModal" tabindex="-1" aria-hidden="true" class={`${hidden ? 'hidden' : 'block'} overflow-hidden fixed bg-[#00000090] justify-center flex flex-col items-center backdrop-blur rounded-md  top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%)] max-h-full`}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-10 h-10 absolute right-4 top-4 cursor-pointer" onClick={() => closeModal()}>
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           <h2 className="mt-20 font- text-5xl font-extrabold align-left text-center "><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">New Project</span></h2>
-          <div className="flex text-white flex-col gap-6  w-[90%]">
+          <div className="flex text-white flex-col gap-6  w-[90%] lg:w-[600px]">
             <div className="flex flex-col mt-20">
               <label for="title">Project Title</label>
               <input name="title" className="bg-black border-[1px] border-slate-100/10 rounded-md p-2 mt-2 outline-none" value={title} onChange={(e) => setTitle(e.target.value)} />
