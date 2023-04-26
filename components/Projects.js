@@ -28,9 +28,9 @@ export default function Projects() {
                     <circle cx="37" cy="5" r="4.5"></circle></svg>
                 </div>
                 <div className="p-4 pt-2 flex flex-col flex-start grow">
-                  <p className="text-md md:text-xl pb-1  font-semibold">{project.title}</p>
+                  <p className="text-md md:text-xl pb-1  font-semibold text-white">{project.title}</p>
                   <span className={`text-xs w-min font-medium mr-2 p-[1px] rounded-xl  relative inline-flex items-center justify-center p-[1px] font-semibold overflow-hidden text-md font-medium text-gray-900 rounded-md group bg-gradient-to-r from-purple-600 to-blue-600 text-white`}>
-                    <p className="relative transition-all ease-in duration-75 bg-white dark:bg-black  rounded-xl px-2 ">{project.lang}</p>
+                    <p className="relative transition-all ease-in duration-75 text-white bg-black rounded-xl px-2 ">{project.lang}</p>
                   </span>
                   <p className="text-sm  md:text-sm font-normal sm:text-md pt-1 text-gray-400">{project.description}</p>
                 </div>
