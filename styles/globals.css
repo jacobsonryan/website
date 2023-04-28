@@ -13,6 +13,35 @@
 /* } */
 
 
+.fn-hide {
+  position: relative;
+  left: -2px;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+
+
+.fn-show {
+  position: relative;
+  left: 2px;
+  opacity: 1;
+}
+
+.ln-hide {
+  position: relative;
+  left: 0px;
+  opacity: 0;
+  transition: all 200ms ease-in;
+}
+
+
+.ln-show {
+  position: relative;
+  left: 2px;
+  opacity: 1;
+
+}
+
 code {
   tab-size: 0px;
 }

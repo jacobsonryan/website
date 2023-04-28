@@ -14,6 +14,7 @@ export default function Navbar() {
   const router = useRouter()
 
   const [clientWindowHeight, setClientWindowHeight] = useState(0);
+  const [hover, setHover] = useState(false)
 
   const handleScroll = () => {
     setClientWindowHeight(window.scrollY);
@@ -31,8 +32,8 @@ export default function Navbar() {
   return (
     <nav onScroll={handleScroll} className="nav sticky top-0 bg-black bg-opacity-10  backdrop-blur z-10">
       <div className=" w-screen flex justify-between items-center px-9 py-4 text-sm">
-        <div className="font-extrabold uppercase text-xl">
-          <h1 className="text-white">Ryan<span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500"> Jacobson</span></h1>
+        <div className="font-extrabold uppercase text-xl"   onMouseEnter={() => setHover(true)} onMouseLeave={() =>  setHover(false)}>
+          <Link href="/" className="text-white cursor-pointer">R<span className={`fn-hide ${hover ? 'fn-show' : ''}`}>yan</span><span className={`font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 relative left-[-40px] transition-all duration-200 ease-in-out ${hover ? 'left-[10px]' : ''}`}>J<span className={`ln-hide ${hover ? 'ln-show' : ''}`}>acobson</span> </span></Link>
         </div>
         <div className="cursor-pointer block md:hidden" onClick={() => setOpen(!open)}>
           <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="invert">
