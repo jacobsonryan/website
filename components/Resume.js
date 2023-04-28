@@ -1,8 +1,9 @@
 export default function Resume() {
   return (
+    <>
     <div id="resume">
-      <div className="divider p-8"></div>
-      <h2 className=" font-  text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Resume</span></h2>
+    <div id="resume-div" className="divider p-8"></div>
+      <h2 className="mt-20 font-  text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Resume</span></h2>
       <p className="text-xs md:text-xs  tracking-widest  text-gray-400 text-center font-semibold uppercase mb-10">Learn more about my experience by downloading my resume</p>
       <div className="resume justify-center flex  ">
         <div class={`bg-opacity-0  mb-10 experience h-[525px] backdrop-blur-lg bg-gray-800  ring-1 w-[600px]  ring-slate-100/10 rounded-md h-[445px] `}>            
@@ -77,5 +78,6 @@ export default function Resume() {
         </div>
       </div>
     </div>
+    </>
   )
 }
