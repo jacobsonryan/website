@@ -29,7 +29,7 @@ export default function Projects() {
                 </div>
                 <div className="p-4 pt-2 flex flex-col flex-start grow">
                   <p className="text-md md:text-xl pb-1  font-semibold text-white">{project.title}</p>
-                    <p className="relative transition-all ease-in duration-75 text-white bg-gray-700 rounded-xl px-2  w-min text-xs">{project.lang}</p>
+                    <p className="relative transition-all ease-in duration-75 text-white bg-[#222222] rounded-xl px-2  w-min text-xs">{project.lang}</p>
                   <p className="text-sm  md:text-sm font-normal sm:text-md pt-1 text-gray-400">{project.description}</p>
                 </div>
                 <div className="p-4 gap-4 flex flex-end">
