@@ -1,23 +1,25 @@
 import Marquee from 'react-fast-marquee'
 import Image from 'next/image'
-import css from '../assets/css.svg'
+import git from '../assets/git.svg'
 import html from '../assets/html.svg'
-import mongo from '../assets/mongo.svg'
 import next from '../assets/next.svg'
 import react from '../assets/react.svg'
 import tailwind from '../assets/tailwindcss.svg'
+import vercel from '../assets/vercel.svg'
 import node from '../assets/node.svg'
 import cypress from '../assets/cypress.svg'
+import heroku from '../assets/heroku.svg'
 
 const icons = [
- {  name: html, height: 75 },
- {  name: mongo, height: 75 },
- {  name: next, height: 125 },
- {  name: node, height: 75 },
- {  name: css, height: 75 },
- {  name: react, height: 75 },
- {  name: tailwind, height: 125 },
+ {  name: html, height: 65 },
+ {  name: next, height: 90 },
+ {  name: node, height: 60 },
+ {  name: react, height: 60 },
+ {  name: tailwind, height: 110 },
  {  name: cypress, height: 50 },
+ {  name: vercel, height: 110 },
+ {  name: git, height: 60 },
+ {  name: heroku, height: 60 },
 ]
 
 export default function Carousel() {
@@ -33,7 +35,7 @@ export default function Carousel() {
         gradientColor={[0,0,0]}
       >
       {icons.map(icon => {
-        return <div className="content brightness-50  grayscale-[1] hover:filter-none cursor-pointer"><Image src={icon.name} height={icon.height}  /></div>
+        return <div className={`content  grayscale-[1] opacity-[0.8]`}><Image draggable="false" src={icon.name} height={icon.height} /></div>
       })}
       </Marquee>
     </div>

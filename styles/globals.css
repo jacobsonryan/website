@@ -8,9 +8,9 @@
 /*   font-family: 'Inter', sans-serif; */
 /*  } */
 
-/* ::selection { */
-/*   background: #1e40af;  */
-/* } */
+::selection {
+  background: #444444; 
+}
 
 
 .fn-hide {
@@ -20,6 +20,35 @@
   transition: all 200ms ease-in-out;
 }
 
+
+.shiny {
+  color: white;
+  position: relative;
+  border: none;
+  padding: 10px 15px;
+  background: #3984ff;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.shiny::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--y, 0) * 1px - 50px);
+  left: calc(var(--x, 0) * 1px - 50px);
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(white, #3984ff00 80%);
+
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.shiny:hover::after {
+  opacity: 0.4;
+}
 
 .fn-show {
   position: relative;
@@ -191,7 +220,7 @@ a {
 
 
 .carousel {
-  margin: 40px;
+  margin: 15px 0px 10px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,8 +228,7 @@ a {
 }
 
 .carousel .content {
-  padding: 0px 50px;
-  font-size: 50px;
+  padding: 0px 35px;
 }
 
 .grid_bg {
@@ -242,7 +270,7 @@ a {
 .proj-btn, .gh-btn  {
   background-color: black;
   color: white;
-  border: 1px solid #ffffff40;
+  border: 1px solid #ffffff90;
   padding: 12px 10px;
   width: 175px;
   display: flex;
@@ -259,6 +287,11 @@ a {
 
 .gh-glow {
       box-shadow: -5px -5px 50px #9333ea50, 5px 5px 50px #2563eb50;
+}
+
+
+hr {
+    border-top: 1px dashed #ffffff30;
 }
 
 .proj-btn:hover  {
@@ -355,7 +388,7 @@ a {
 
 .animated-background2 {
     animation-duration: 2.4s;
-    animation-delay: 3.1s;
+    animation-delay: 3.3s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-name: placeHolderShimmer;

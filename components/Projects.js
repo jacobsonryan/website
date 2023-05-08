@@ -15,7 +15,7 @@ export default function Projects() {
       <div id="projects">
       <div id="proj-div" className="divider p-8"></div>
       <div className="flex flex-col justify-center items-center overflow-hidden noisy">
-      <h2 className=" mt-20  text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Projects</span></h2>
+      <h2 className=" mt-20  text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Projects</span></h2>
       <p className="text-xs md:text-xs  tracking-widest  text-gray-400 text-center font-semibold uppercase mb-10">Here are some of the most recent projects I have been working on</p>
         <div className="grid grid-cols-1 gap-4 p-4 w-[90%] md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1">
           {projects.map((project, index) => {
@@ -29,9 +29,7 @@ export default function Projects() {
                 </div>
                 <div className="p-4 pt-2 flex flex-col flex-start grow">
                   <p className="text-md md:text-xl pb-1  font-semibold text-white">{project.title}</p>
-                  <span className={`text-xs w-min font-medium mr-2 p-[1px] rounded-xl  relative inline-flex items-center justify-center p-[1px] font-semibold overflow-hidden text-md font-medium text-gray-900 rounded-md group bg-gradient-to-r from-purple-600 to-blue-600 text-white`}>
-                    <p className="relative transition-all ease-in duration-75 text-white bg-black rounded-xl px-2 ">{project.lang}</p>
-                  </span>
+                    <p className="relative transition-all ease-in duration-75 text-white bg-gray-700 rounded-xl px-2  w-min text-xs">{project.lang}</p>
                   <p className="text-sm  md:text-sm font-normal sm:text-md pt-1 text-gray-400">{project.description}</p>
                 </div>
                 <div className="p-4 gap-4 flex flex-end">

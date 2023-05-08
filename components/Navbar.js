@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <nav onScroll={handleScroll} className="nav sticky top-0 bg-black bg-opacity-10  backdrop-blur z-10">
       <div className=" w-screen flex justify-between items-center px-9 py-4 text-sm">
-        <div className="font-extrabold uppercase text-xl">
+        <div className="font-extrabold  text-xl">
           <Link href="/" className="text-white cursor-pointer">Ryan<span className={`font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500`}> Jacobson</span></Link>
         </div>
         <div className="cursor-pointer block md:hidden" onClick={() => setOpen(!open)}>
