@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <section className="noisy h-screen w-screen flex items-center justify-center">
-          <div className="text-lg lg: text-center w-[90%] md:w-[70%] lg:w-[80%] xl:w-[55%] mb-[150px] ">
+          <div className="text-lg lg: text-center w-[90%] md:w-[70%] lg:w-[80%] xl:w-[55%] mb-[150px] mt-16">
               <h2 className="text-white align-center md:text-xl mb-10">Welcome to the <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">web portfolio </span>of</h2>
               <h1 className="text-white text-6xl xs:text-8xl font-extrabold leading-none sm:whitespace-nowrap tracking-tight md:text-7xl lg:text-8xl ">Ryan
               <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600"> Jacobson</span></h1>
