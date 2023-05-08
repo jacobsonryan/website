@@ -17,15 +17,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <section className="noisy h-screen w-screen flex items-center justify-center">
-          <div className="text-lg lg: text-center w-[90%] md:w-[70%] lg:w-[80%] xl:w-[50%] mb-[150px] ">
+          <div className="text-lg lg: text-center w-[90%] md:w-[70%] lg:w-[80%] xl:w-[55%] mb-[150px] ">
               <h2 className="text-white align-center md:text-xl mb-10">Welcome to the <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">web portfolio </span>of</h2>
-              <h1 className="text-white text-6xl xs:text-8xl font-extrabold leading-none tracking-tight md:text-7xl lg:text-8xl ">Ryan
+              <h1 className="text-white text-6xl xs:text-8xl font-extrabold leading-none sm:whitespace-nowrap tracking-tight md:text-7xl lg:text-8xl ">Ryan
               <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600"> Jacobson</span></h1>
               <div>
                 <p className="text-xs md:text-xs  text-center text-gray-400 tracking-widest  font-semibold uppercase mt-16">Scroll down to learn more about my skills & experience</p>
                 <Carousel />
               </div>
-              <div className="flex gap-4 text-sm  justify-center mt-10 flex-wrap lg:flex-nowrap">
+              <div className="flex gap-3 sm:gap-8 text-sm  justify-center mt-10 flex-wrap lg:flex-nowrap">
                 <a draggable="false" href="mailto:ryanhjacobson@gmail.com" target="_blank" class="proj-btn btn-glow text-md font-semibold w-full sm:w-[175px]">
                   Contact Me 
                   {/* <svg aria-hidden="true" class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> */}
