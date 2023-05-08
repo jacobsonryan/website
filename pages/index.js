@@ -25,12 +25,12 @@ export default function Home() {
                 <p className="text-xs md:text-xs  text-center text-gray-400 tracking-widest  font-semibold uppercase mt-16">Scroll down to learn more about my skills & experience</p>
                 <Carousel />
               </div>
-              <div className="flex gap-8   text-sm justify-center mt-10">
-                <a draggable="false" href="mailto:ryanhjacobson@gmail.com" target="_blank" class="flex items-center proj-btn btn-glow text-md font-semibold">
+              <div className="flex gap-4 text-sm  justify-center mt-10 flex-wrap lg:flex-nowrap">
+                <a draggable="false" href="mailto:ryanhjacobson@gmail.com" target="_blank" class="proj-btn btn-glow text-md font-semibold w-full sm:w-[175px]">
                   Contact Me 
                   {/* <svg aria-hidden="true" class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> */}
                 </a>
-                <a draggable="false" href="https://github.com/jacobsonryan" target="_blank" class="relative inline-flex items-center justify-center p-[1px] gh-glow  font-semibold overflow-hidden text-md font-medium text-gray-900 rounded-md group bg-gradient-to-br from-purple-600 to-blue-600 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none">
+                <a draggable="false" href="https://github.com/jacobsonryan" target="_blank" class="relative inline-flex items-center w-full sm:w-[175px] justify-center p-[1px] gh-glow  font-semibold overflow-hidden text-md font-medium text-gray-900 rounded-md group bg-gradient-to-br from-purple-600 to-blue-600 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none">
                   <span class="relative transition-all ease-in duration-75 bg-white dark:bg-black gh-btn rounded-md group-hover:bg-opacity-0 hover:text-black">
                      Github
                   </span>

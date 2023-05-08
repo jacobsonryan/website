@@ -272,16 +272,16 @@ a {
   color: white;
   border: 1px solid #ffffff90;
   padding: 12px 10px;
-  width: 175px;
   display: flex;
   justify-content: center;
   cursor: pointer;
   border-radius: 4px;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
   border-radius: 5px;
 }
 .gh-btn {
   color: white;
+  width: 100%;
   border: none;
 }
 
