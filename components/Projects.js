@@ -21,6 +21,7 @@ export default function Projects() {
           {projects.map((project, index) => {
             return (
               <div key={index} className={`bg-gray-800 h-64 bg-opacity-0 backdrop-blur-lg flex flex-col justify-between ring-1 ring-slate-100/10   ${project.id == 1 ? 'order-first' : 'order-last'} rounded-md`}>
+              {/* <div class="absolute -top-px left-20 right-11 h-px bg-gradient-to-r from-[#ffffff10]/0 via-[#ffffff10]/30 to-[#ffffff10]/0"></div> */}
                 <div className="flex gap-2 align-middle items-center px-4 pt-4">
                   <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-2.5 w-auto stroke-slate-500/30">
                     <circle cx="5" cy="5" r="4.5"></circle>
@@ -36,6 +37,7 @@ export default function Projects() {
                     <a href={project.code} target="_blank" className="text-gray-400 hover:text-white">Github</a>
                     <a href={project.view} target="_blank" className="text-gray-400 hover:text-white" style={{display: project.view != '' ? 'block' : 'none'}}>Demo</a>
                 </div>
+                {/* <div class="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-[#ffffff10]/0 via-[#ffffff10]/30 to-[#ffffff10]/0"></div> */}
               </div>
             )
           })}

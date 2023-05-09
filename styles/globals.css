@@ -20,6 +20,27 @@
   transition: all 200ms ease-in-out;
 }
 
+.card:after {
+  background: linear-gradient(
+    transparent, 
+    #ffffff90, 
+    transparent
+  );
+  height: 70px;
+  width: 1px;
+  position: absolute;
+  left: -1px;
+  top: 65%;
+  content: "";
+  opacity: 0;
+  transition: top 600ms ease, opacity 600ms ease;
+} 
+
+.card:hover:after {
+  top: 15%;
+  opacity: 1;
+}
+
 
 .shiny {
   color: white;
@@ -228,7 +249,7 @@ a {
 }
 
 .carousel .content {
-  padding: 0px 35px;
+  padding: 0px 20px;
 }
 
 .grid_bg {

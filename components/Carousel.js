@@ -14,11 +14,11 @@ const icons = [
  {  name: html, height: 65 },
  {  name: next, height: 90 },
  {  name: node, height: 60 },
- {  name: react, height: 60 },
+ {  name: react, height: 55 },
  {  name: tailwind, height: 110 },
- {  name: cypress, height: 50 },
+ {  name: cypress, height: 40 },
  {  name: vercel, height: 110 },
- {  name: git, height: 60 },
+ {  name: git, height: 50 },
  {  name: heroku, height: 60 },
 ]
 
@@ -35,7 +35,7 @@ export default function Carousel() {
         gradientColor={[0,0,0]}
       >
       {icons.map(icon => {
-        return <div className={`content  grayscale-[1] opacity-[0.8]`}><Image draggable="false" src={icon.name} height={icon.height} /></div>
+        return <div className={`content  grayscale-[1] `}><Image draggable="false" src={icon.name} height={icon.height} /></div>
       })}
       </Marquee>
     </div>
