@@ -51,7 +51,7 @@ export default function Experience() {
                     <div className="flex">
                       {jobs.map((job, idx) => {
                         return (
-                            <code className={`cursor-pointer px-1 py-3  text-[8px] sm:text-xs sm:px-3   border-[1px] border-[#ffffff20] border-l-[#00000000] ${i == idx ? 'border-b-black' : 'border-b-[#ffffff00] '} ${job.id == 1 ? 'ml-2 border-l-[#ffffff20]' : ''} border-t-black relative md:top-[0.07em] top-[0.08em]  flex justify-between gap-1 place-items-center`}>
+                            <code className={`cursor-pointer px-1 py-3  text-[8px] sm:text-xs sm:px-3   border-[1px] border-[#ffffff20] border-l-[#00000000] ${i == idx ? 'border-b-black' : 'border-b-[#ffffff00] '} ${job.id == 1 ? 'ml-2 border-l-[#ffffff20]' : ''} border-t-black relative md:top-[0.07em] top-[1em]  flex justify-between gap-1 place-items-center`}>
                               <p className={`${i == idx ? 'text-white' : 'text-[#ffffff30]'}`}>job-{job.id}.js</p>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="w-3 h-3">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
