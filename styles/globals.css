@@ -36,6 +36,10 @@
   transition: top 600ms ease, opacity 600ms ease;
 } 
 
+.card {
+  cursor: pointer;
+}
+
 .card:hover:after {
   top: 15%;
   opacity: 1;
