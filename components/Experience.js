@@ -11,11 +11,11 @@ export default function Experience() {
   const jobs = [
     {
       id: 3,
-      code: `const job = {\n \ttitle: "Software Engineer II",\n \tfrom: "January 2023,"\n \tto: null, \n \tcompany: "JP Morgan Chase"\n}`
+      code: `const job = {\n \ttitle: "Software Engineer II",\n \tfrom: "January 2023",\n \tto: null, \n \tcompany: "JP Morgan Chase"\n}`
     },
     {
       id: 2,
-      code: `const job = {\n \ttitle: "Software Engineer I",\n \tfrom: "December 2021,"\n \tto: "December 2022", \n \tcompany: "JP Morgan Chase"\n}`
+      code: `const job = {\n \ttitle: "Software Engineer I",\n \tfrom: "December 2021",\n \tto: "December 2022", \n \tcompany: "JP Morgan Chase"\n}`
     },
     {
       id: 1,
