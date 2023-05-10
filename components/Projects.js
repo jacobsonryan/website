@@ -11,15 +11,6 @@ export default function Projects() {
       })
   }, [])
 
-  const handleMouseMove = (e) => {
-    const { currentTarget: target } = e
-    const rect = target.getBoundingClientRect()
-    let x = e.clientX - rect.left
-    let y = e.clientY - rect.top
-    target.style.setProperty("--mouse-x", `${x}px`)
-    target.style.setProperty("--mouse-y", `${y}px`)
-  }
-
   return (
     <>
       <div id="projects">
@@ -30,7 +21,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 gap-4 p-4 w-[90%] md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1">
           {projects.map((project, index) => {
             return (
-              <div key={index} onMouseMove={handleMouseMove} className={`ring-1 ring-slate-100/10 h-64  backdrop-blur-lg flex flex-col justify-between    ${project.id == 1 ? 'order-first' : 'order-last'} rounded-md`}>
+              <div key={index} className={`ring-1 ring-slate-100/10 h-64  backdrop-blur-lg flex flex-col justify-between    ${project.id == 1 ? 'order-first' : 'order-last'} rounded-md`}>
                 {/* <div class="absolute -top-px left-20 right-11 h-px bg-gradient-to-r from-[#ffffff10]/0 via-[#ffffff10]/30 to-[#ffffff10]/0"></div> */}
                   <div className="flex gap-2 align-middle items-center px-4 pt-4">
                     <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-2.5 w-auto stroke-slate-500/30">

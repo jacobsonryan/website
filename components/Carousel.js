@@ -9,6 +9,7 @@ import vercel from '../assets/vercel.svg'
 import node from '../assets/node.svg'
 import cypress from '../assets/cypress.svg'
 import heroku from '../assets/heroku.svg'
+import auth0 from '../assets/auth0.svg'
 
 const icons = [
  {  name: html, height: 65 },
@@ -18,6 +19,7 @@ const icons = [
  {  name: tailwind, height: 110 },
  {  name: cypress, height: 40 },
  {  name: vercel, height: 110 },
+ {  name: auth0, height: 50 },
  {  name: git, height: 50 },
  {  name: heroku, height: 60 },
 ]
