@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 
 export default function Projects() {
   const [projects, setProjects] = useState([])
+  const [hover, setHover] = useState("")
   useEffect(() => {
     fetch('/api/projects')
       .then(res => res.json())
@@ -11,35 +12,40 @@ export default function Projects() {
       })
   }, [])
 
+  const handleMouseEnter = (i) => {
+    setHover(i)
+  }
+
+  const handleMouseLeave = () => {
+    setHover()
+  }
+
   return (
     <>
       <div id="projects">
       <div id="proj-div" className="divider p-8"></div>
       <div className="flex flex-col justify-center items-center overflow-hidden noisy">
-      <h2 className=" mt-20  text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Projects</span></h2>
+      <h2 className=" mt-20  text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Featured Projects</span></h2>
       <p className="text-xs md:text-xs  tracking-widest  text-gray-400 text-center font-semibold uppercase mb-10 w-[90%]">Here are some of the most recent projects I have been working on</p>
-        <div className="grid grid-cols-1 gap-4 p-4 w-[90%] md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1">
+        <div className="grid grid-cols-1 gap-4 p-4 w-[80%] md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1">
           {projects.map((project, index) => {
             return (
-              <div key={index} className={`ring-1 ring-slate-100/10 h-64  backdrop-blur-lg flex flex-col justify-between    ${project.id == 1 ? 'order-first' : 'order-last'} rounded-md`}>
-                {/* <div class="absolute -top-px left-20 right-11 h-px bg-gradient-to-r from-[#ffffff10]/0 via-[#ffffff10]/30 to-[#ffffff10]/0"></div> */}
-                  <div className="flex gap-2 align-middle items-center px-4 pt-4">
-                    <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-2.5 w-auto stroke-slate-500/30">
-                      <circle cx="5" cy="5" r="4.5"></circle>
-                      <circle cx="21" cy="5" r="4.5"></circle>
-                      <circle cx="37" cy="5" r="4.5"></circle></svg>
+              <a href={project.view ? project.view : project.code} target="__blank" key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave()} className={`${project.id == 1 ? 'md:col-span-2' : ''} ${project.id == 1 ? 'order-first' : ''}`}>
+                <div className={`cursor-pointer hover:ring-slate-100/30 duration-200 project transition-all ring-1 ring-slate-100/10 h-64  backdrop-blur-lg flex flex-col justify-between rounded-2xl`}>
+                    <div className="p-8 flex flex-col flex-start grow">
+                      <p className="text-md md:text-xl pb-1  font-semibold text-white">{project.title}</p>
+                        <p className="relative transition-all ease-in duration-75 text-white bg-[#111111] rounded-xl px-3 py-[1px]  w-min text-xs">{project.lang}</p>
+                      <p className="text-md  md:text-md font-normal sm:text-md pt-1 text-gray-400">{project.description}</p>
+                    </div>
+                    <div className=" m-8 absolute bottom-0 right-0">
+                    <div className={`ring-1 ring-slate-100/20 w-min p-2 rounded-full transition-all duration-300 ${hover == index ? 'bg-[#111111] rotate-[-40deg] scale-125' : ''}`}>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`w-5 h-5 duration-300 transition-all ${hover == index ? 'scale-75' : ''}`}>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                      </svg>
+                    </div>
                   </div>
-                  <div className="p-4 pt-2 flex flex-col flex-start grow">
-                    <p className="text-md md:text-xl pb-1  font-semibold text-white">{project.title}</p>
-                      <p className="relative transition-all ease-in duration-75 text-white bg-[#222222] rounded-xl px-2  w-min text-xs">{project.lang}</p>
-                    <p className="text-sm  md:text-sm font-normal sm:text-md pt-1 text-gray-400">{project.description}</p>
-                  </div>
-                  <div className="p-4 gap-4 flex flex-end">
-                      <a href={project.code} target="_blank" className="text-gray-400 hover:text-white">Github</a>
-                      <a href={project.view} target="_blank" className="text-gray-400 hover:text-white" style={{display: project.view != '' ? 'block' : 'none'}}>Demo</a>
-                  </div>
-                  {/* <div class="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-[#ffffff10]/0 via-[#ffffff10]/30 to-[#ffffff10]/0"></div> */}
-              </div>
+                </div>
+              </a>
             )
           })}
         </div>

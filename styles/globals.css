@@ -13,6 +13,10 @@
 }
 
 
+.project {
+  flex: 0 0 100%;
+}
+
 .fn-hide {
   position: relative;
   left: -2px;

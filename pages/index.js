@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Skills from '../components/Skills'
 import Carousel from '../components/Carousel'
-import Image from 'next/image'
-import mouse from '../assets/mouse.svg'
 import { useRouter } from 'next/router'
 
 export default function Home() {
