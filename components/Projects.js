@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 export default function Projects() {
   const [projects, setProjects] = useState([])
-  const [hover, setHover] = useState("")
+  const [hover, setHover] = useState()
   useEffect(() => {
     fetch('/api/projects')
       .then(res => res.json())
