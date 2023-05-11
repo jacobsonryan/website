@@ -34,8 +34,8 @@ export default function Projects() {
                 <div className={`cursor-pointer hover:ring-slate-100/30 duration-200 project transition-all ring-1 ring-slate-100/10 h-64  backdrop-blur-lg flex flex-col justify-between rounded-2xl`}>
                     <div className="p-4 flex flex-col flex-start grow">
                       <p className="text-md md:text-xl pb-1  font-semibold text-white">{project.title}</p>
-                      <p className="relative transition-all ease-in duration-75 text-white bg-[#111111] rounded-xl px-3 py-[1px]  w-min text-xs">{project.lang}</p>
-                      <p className="  pt-1 text-gray-400">{project.description}</p>
+                      <p className=" place-items-center text-white  ring-1 ring-slate-100/10 rounded-xl font-mono px-2 pt-1  w-min text-xs">{project.lang}</p>
+                      <p className="pt-1 text-gray-400">{project.description}</p>
                     </div>
                     <div className="relative">
                     <div className={`ring-1 ring-slate-100/20 absolute bottom-0 right-0 m-8 w-min p-2 rounded-full transition-all duration-300 ${hover == index ? 'sm:bg-[#111111] sm:rotate-[-40deg] sm:scale-125' : ''}`}>
