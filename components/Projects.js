@@ -30,7 +30,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 gap-4 p-4 w-[80%] md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1">
           {projects.map((project, index) => {
             return (
-              <a href={project.view ? project.view : project.code} target="__blank" key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave()} className={`${project.id == 1 ? 'md:col-span-2' : ''} ${project.id == 1 ? 'order-first' : ''}`}>
+              <a href={project.view ? project.view : project.code} target="__blank" key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave()} className={`${project.id == 1 ? 'order-first' : ''}`}>
                 <div className={`cursor-pointer hover:ring-slate-100/30 duration-200 project transition-all ring-1 ring-slate-100/10 h-64  backdrop-blur-lg flex flex-col justify-between rounded-2xl`}>
                     <div className="p-4 flex flex-col flex-start grow">
                       <p className="text-md md:text-xl pb-1  font-semibold text-white">{project.title}</p>
