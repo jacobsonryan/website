@@ -26,7 +26,7 @@ export default function Experience() {
   return (
     <div id="experience">
       <div className="divider p-8"></div>
-      <h2 className="mt-20 font- text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Experience</span></h2>
+      <h2 className="mt-20 font- text-4xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Experience</span></h2>
       <p className="text-xs md:text-xs  text-center text-gray-400 tracking-widest  font-semibold uppercase mb-10">The positions I have worked in my career so far</p>
         <div className="absolute timeline w-screen">
           <div class={` absolute w-3 h-3 bg-black  mt-[137.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#ffffff30] dark:bg-[black] hidden lg:block`}></div>

@@ -25,7 +25,7 @@ export default function Projects() {
       <div id="projects">
       <div id="proj-div" className="divider p-8"></div>
       <div className="flex flex-col justify-center items-center overflow-hidden noisy">
-      <h2 className=" mt-20  text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Featured Projects</span></h2>
+      <h2 className=" mt-20  text-4xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Featured Projects</span></h2>
       <p className="text-xs md:text-xs  tracking-widest  text-gray-400 text-center font-semibold uppercase mb-10 w-[90%]">Here are some of the most recent projects I have been working on</p>
         <div className="grid grid-cols-1 gap-4 p-4 w-[80%] md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1">
           {projects.map((project, index) => {
