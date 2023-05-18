@@ -10,17 +10,19 @@ import node from '../assets/node.svg'
 import cypress from '../assets/cypress.svg'
 import heroku from '../assets/heroku.svg'
 import auth0 from '../assets/auth0.svg'
+import prisma from '../assets/prisma.svg'
 
 const icons = [
  {  name: html, height: 65 },
  {  name: next, height: 90 },
- {  name: node, height: 60 },
+ // {  name: node, height: 60 },
  {  name: react, height: 55 },
- {  name: tailwind, height: 110 },
+ {  name: tailwind, height: 100 },
  {  name: cypress, height: 40 },
  {  name: vercel, height: 110 },
- {  name: auth0, height: 50 },
- {  name: git, height: 50 },
+ {  name: auth0, height: 45 },
+ {  name: prisma, height: 30 },
+ {  name: git, height: 40 },
  {  name: heroku, height: 60 },
 ]
 
