@@ -5,7 +5,10 @@ import { useState, useEffect } from "react"
 import ResumeUpload from '../components/ResumeUpload'
 
 export default function Admin() {
+  const [hover, setHover] = useState()
   const [hidden, setHidden] = useState(true)
+  const [edit, setEdit] = useState(false)
+  const [id, setId] = useState("")
   const [title, setTitle] = useState("")
   const [lang, setLang] = useState("")
   const [desc, setDesc] = useState("")
@@ -17,7 +20,7 @@ export default function Admin() {
     fetch('/api/projects')
       .then(res => res.json())
       .then(data => {
-        setProjects(data)
+        setProjects(data.sort((a, b) => a.id - b.id))
       })
   }, [projects])
 
@@ -53,7 +56,57 @@ export default function Admin() {
   const closeModal = () => {
     setHidden(true)
     document.body.style.overflow = 'auto'
+  }
 
+  const openEdit = (index) => {
+    setHidden(false)
+    setEdit(true)
+    setId(projects[index].id)
+    setDesc(projects[index].description)
+    setTitle(projects[index].title)
+    setLang(projects[index].lang)
+    setDemo(projects[index].code)
+    setRepo(projects[index].view)
+  }
+
+
+
+  const update = async () => {
+    try {
+      const response = await axios.put('/api/update', {
+        id: id,
+        title: title,
+        description: desc,
+        view: repo,
+        code: demo,
+        lang: lang,
+      });
+
+      if (response.status === 200) {
+        const updatedSnippet = response.data;
+        console.log(updatedSnippet); 
+      } else {
+        throw new Error('Update failed');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+    setEdit(false)
+    setHidden(true)
+    setId("")
+    setDesc("")
+    setTitle("")
+    setLang("")
+    setDemo("")
+    setRepo("")
+  };
+
+  const handleMouseEnter = (i) => {
+    setHover(i)
+  }
+
+  const handleMouseLeave = () => {
+    setHover()
   }
 
   return (
@@ -67,45 +120,43 @@ export default function Admin() {
       <div className="flex justify-center place-items-center flex-col">
           <ResumeUpload />
         <div className="grid grid-cols-1 gap-4 p-4 w-[90%] md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 ">
-          <div className={`bg-gray-800 h-64 bg-opacity-0 backdrop-blur-lg border-dashed border-[1px] border-slate-100/10 transition-all duration-100 hover:border-[#333333] ring-slate-100/10 rounded-md order-first cursor-pointer `} onClick={() => openModal()}>
-            <div className="flex gap-2 align-middle items-center px-4 pt-4">
-              <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-2.5 w-auto stroke-slate-500/30">
-                <circle cx="5" cy="5" r="4.5"></circle>
-                <circle cx="21" cy="5" r="4.5"></circle>
-                <circle cx="37" cy="5" r="4.5"></circle></svg>
-            </div>
+          <div className={`bg-gray-800 h-64 bg-opacity-0 backdrop-blur-lg border-dashed border-[1px] border-slate-100/10 transition-all duration-200 hover:border-slate-100/30 rounded-2xl order-first cursor-pointer `} onClick={() => openModal()}>
               <div className="flex justify-center mt-[90px] place-items-center items-center">
-                <p className="text-xs md:text-xs   text-gray-400 tracking-widest  font-semibold uppercase place-items-center">New Project</p>
+                <p className="text-xs md:text-xs  mt-5 text-gray-400 tracking-widest  font-semibold uppercase place-items-center">New Project</p>
               </div>
             </div>
           {projects.map((project, index) => {
             return (
-              <div key={index} className={`bg-gray-800 h-64 bg-opacity-0 backdrop-blur-lg flex flex-col justify-between ring-1 ring-slate-100/10   ${project.id == 1 ? 'order-first' : 'order-last'} rounded-md`}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-5 h-5 absolute right-4 top-4 cursor-pointer" onClick={() => handleDelete(project.id)}>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-                <div className="flex gap-2 align-middle items-center px-4 pt-4">
-                  <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-2.5 w-auto stroke-slate-500/30">
-                    <circle cx="5" cy="5" r="4.5"></circle>
-                    <circle cx="21" cy="5" r="4.5"></circle>
-                    <circle cx="37" cy="5" r="4.5"></circle></svg>
+              <div>
+                <div className="flex relative z-[10]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute right-12 top-[18px] cursor-pointer" onClick={() => openEdit(index)}>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute right-4 top-[18px] cursor-pointer" onClick={() => handleDelete(project.id)}>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </div>
-                <div className="p-4 pt-2 flex flex-col flex-start grow">
-                  <p className="text-white text-md md:text-xl pb-1  font-semibold">{project.title}</p>
-                  <span className={`text-xs w-min font-medium mr-2 p-[1px] rounded-xl  relative inline-flex items-center justify-center p-[1px] font-semibold overflow-hidden text-md font-medium text-gray-900 rounded-md group bg-gradient-to-r from-purple-600 to-blue-600 text-white`}>
-                    <p className="relative transition-all ease-in duration-75 bg-black text-white rounded-xl px-2 ">{project.lang}</p>
-                  </span>
-                  <p className="text-sm  md:text-sm font-normal sm:text-md pt-1 text-gray-400">{project.description}</p>
-                </div>
-                <div className="p-4 gap-4 flex flex-end">
-                    <a href={project.code} target="_blank" className="text-gray-400 hover:text-white">Github</a>
-                    <a href={project.view} target="_blank" className="text-gray-400 hover:text-white" style={{display: project.view != '' ? 'block' : 'none'}}>Demo</a>
-                </div>
+                <a href={project.view ? project.view : project.code} target="__blank" key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave()} >
+                  <div className={`cursor-pointer hover:ring-slate-100/30 duration-200 project transition-all ring-1 ring-slate-100/10 h-64  backdrop-blur-lg flex flex-col justify-between rounded-2xl`}>
+                      <div className="p-4 flex flex-col flex-start grow">
+                        <p className="text-md md:text-xl pb-1  font-semibold text-white">{project.title}</p>
+                        <p className=" place-items-center text-white  ring-1 ring-slate-100/10 rounded-xl font-mono px-2 pt-1  w-min text-xs">{project.lang}</p>
+                        <p className="pt-1 text-gray-400">{project.description}</p>
+                      </div>
+                      <div className="relative">
+                      <div className={`ring-1 ring-slate-100/20 absolute bottom-0 right-0 m-8 w-min p-2 rounded-full transition-all duration-300 ${hover == index ? 'sm:bg-[#111111] sm:rotate-[-40deg] sm:scale-125' : ''}`}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`w-5 h-5 duration-300 transition-all ${hover == index ? 'sm:scale-75' : ''}`}>
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
             )
           })}
           </div>
-          <div id="defaultModal" tabindex="-1" aria-hidden="true" class={`${hidden ? 'hidden' : 'block'} overflow-hidden fixed bg-[#00000090] justify-center flex flex-col items-center backdrop-blur rounded-md  top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%)] max-h-full`}>
+          <div id="defaultModal" tabindex="-1" aria-hidden="true" class={`${hidden ? 'hidden' : 'block'} overflow-hidden fixed bg-[#00000090] justify-center flex flex-col items-center backdrop-blur rounded-2xl  top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%)] max-h-full`}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-10 h-10 absolute right-4 top-4 cursor-pointer" onClick={() => closeModal()}>
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -133,7 +184,7 @@ export default function Admin() {
             </div>
           </div>
           <div className="flex justify-center m-16">
-            <a className="proj-btn btn-glow text-md font-semibold" onClick={handleSubmit} >Submit</a>
+            <a className="proj-btn btn-glow text-md font-semibold" onClick={edit ? update : handleSubmit} >Submit</a>
           </div>
           </div>
         </div>
