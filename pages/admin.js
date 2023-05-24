@@ -33,6 +33,7 @@ export default function Admin() {
       code: repo,
       lang: lang
     })
+    setId("")
     setDesc("")
     setTitle("")
     setLang("")
@@ -55,6 +56,13 @@ export default function Admin() {
 
   const closeModal = () => {
     setHidden(true)
+    setEdit(false)
+    setId("")
+    setDesc("")
+    setTitle("")
+    setLang("")
+    setDemo("")
+    setRepo("")
     document.body.style.overflow = 'auto'
   }
 
@@ -154,13 +162,13 @@ export default function Admin() {
                 </a>
               </div>
             )
-          })}
+          }).reverse()}
           </div>
           <div id="defaultModal" tabindex="-1" aria-hidden="true" class={`${hidden ? 'hidden' : 'block'} overflow-hidden fixed bg-[#00000090] justify-center flex flex-col items-center backdrop-blur rounded-2xl  top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%)] max-h-full`}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-10 h-10 absolute right-4 top-4 cursor-pointer" onClick={() => closeModal()}>
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
-          <h2 className="mt-20 font- text-5xl font-extrabold align-left text-center "><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">New Project</span></h2>
+          <h2 className="mt-20 font- text-5xl font-extrabold align-left text-center "><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">{edit ? 'Update Project' : 'New Project'}</span></h2>
           <div className="flex text-white flex-col gap-6  w-[90%] lg:w-[600px]">
             <div className="flex flex-col mt-20">
               <label for="title">Project Title</label>
@@ -184,7 +192,7 @@ export default function Admin() {
             </div>
           </div>
           <div className="flex justify-center m-16">
-            <a className="proj-btn btn-glow text-md font-semibold" onClick={edit ? update : handleSubmit} >Submit</a>
+            <a className="proj-btn btn-glow text-md font-semibold" onClick={edit ? update : handleSubmit} >{edit ? 'Update' : 'Submit'}</a>
           </div>
           </div>
         </div>
