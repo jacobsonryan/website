@@ -44,9 +44,9 @@ export default function Experience() {
                 <li class={`bg-opacity-0 experience   backdrop-blur-lg bg-gray-800  ring-1 lg:w-[45%] w-full ring-slate-100/10 rounded-md sm:h-[275px] h-[200px] ${i == 1 ? 'sm:self-end' : 'sm:self start'} self-start`}>            
                   <div className="flex gap-2 align-middle items-center border-b border-[#ffffff20] px-4">
                     <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto stroke-slate-500/30 ">
-                      <circle cx="5" cy="5" r="4.5"></circle>
-                      <circle cx="21" cy="5" r="4.5"></circle>
-                      <circle cx="37" cy="5" r="4.5"></circle>
+                      <circle fill="#FF5F56" cx="5" cy="5" r="5"></circle>
+                      <circle fill="#FFBD2E" cx="21" cy="5" r="5"></circle>
+                      <circle fill="#27C93F" cx="37" cy="5" r="5"></circle>
                     </svg>
                     <div className="flex">
                       {jobs.map((job, idx) => {

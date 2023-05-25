@@ -10,9 +10,10 @@ export default function Resume() {
           <div className="flex gap-2 flex-row items-center  py-2 border-b border-slate-100/10">
             <div className="h-2.5 w-1/3  stroke-slate-500/30 px-4">
             <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto  stroke-slate-500/30">
-              <circle  cx="5" cy="5" r="4.5"></circle>
-              <circle  cx="21" cy="5" r="4.5"></circle>
-              <circle  cx="37" cy="5" r="4.5"></circle></svg></div>
+              <circle fill="#FF5F56" cx="5" cy="5" r="5"></circle>
+              <circle fill="#FFBD2E" cx="21" cy="5" r="5"></circle>
+              <circle fill="#27C93F" cx="37" cy="5" r="5"></circle>
+            </svg></div>
           <div className="url  bg-[#111111] h-7 w-[150px] lg:w-[250px] rounded-sm text-center flex justify-between items-center text-white text-xs px-2">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="12" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" className="w-4 h-4">
             <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
