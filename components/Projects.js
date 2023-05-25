@@ -10,7 +10,6 @@ export default function Projects() {
       .then(data => {
         setProjects(data.sort((a, b) => a.id - b.id))
       })
-    console.log()
   }, [])
 
   const handleMouseEnter = (i) => {
