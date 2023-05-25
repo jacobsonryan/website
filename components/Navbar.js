@@ -41,14 +41,14 @@ export default function Navbar() {
         </div>
         <div className="gap-9 md:flex hidden font-semibold">
           {routes.map((route, index) => {
-            return <Link key={index} onClick={handleClick()} className={`${router.asPath == route.link ? 'text-white' : 'text-gray-400'} hover:text-white`} href={route.link}>{route.name}</Link>
+            return <Link key={index} onClick={handleClick()} className={`${router.asPath == route.link ? 'text-white' : 'text-gray-400'} transition-all duration-200 hover:text-white`} href={route.link}>{route.name}</Link>
           })}
         </div>
       </div>
       <div className={`${open ? 'block' : 'hidden'} bg-black bg-opacity-20 backdrop-blur absolute md:hidden  flex py-6 gap-6 px-9 flex-col text-left right-1 top-[65px] rounded-md ring-1 ring-slate-100/10  z-10`}>
         {routes.map((route, index) => {
           return <Link key={index} className={`${router.asPath == route.link ? 'text-white' : 'text-gray-400'}
-          hover:text-white`} href={route.link} onClick={() => setOpen(false)} >{route.name}</Link>
+          transition-all duration-200 hover:text-white`} href={route.link} onClick={() => setOpen(false)} >{route.name}</Link>
         })}
       </div>
         <div class={`${clientWindowHeight !== 0 ? 'opacity-1' : 'opacity-0'} -top-px left-20 right-11 h-px bg-[#ffffff20] transition-all duration-300`}></div>
