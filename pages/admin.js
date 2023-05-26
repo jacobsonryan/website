@@ -128,7 +128,7 @@ export default function Admin() {
       <div className="flex justify-center place-items-center flex-col">
           <ResumeUpload />
         <div className="grid grid-cols-1 gap-4 p-4 w-[90%] md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 ">
-          <div className={`bg-gray-800 h-64 bg-opacity-0 backdrop-blur-lg border-dashed border-[1px] border-slate-100/10 transition-all duration-200 hover:border-slate-100/30 rounded-2xl order-first cursor-pointer `} onClick={() => openModal()}>
+          <div className={`bg-gray-800 h-64 bg-opacity-0 backdrop-blur-lg border-dashed border-[1px] border-[#222] transition-all duration-200 hover:border-[#ffffff80] rounded-2xl order-first cursor-pointer `} onClick={() => openModal()}>
               <div className="flex justify-center mt-[90px] place-items-center items-center">
                 <p className="text-xs md:text-xs  mt-5 text-gray-400 tracking-widest  font-semibold uppercase place-items-center">New Project</p>
               </div>
@@ -145,7 +145,7 @@ export default function Admin() {
                   </svg>
                 </div>
                 <a href={project.view ? project.view : project.code} target="__blank" key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave()} >
-                  <div className={`cursor-pointer hover:ring-slate-100/30 duration-200 project transition-all ring-1 ring-slate-100/10 h-64  backdrop-blur-lg flex flex-col justify-between rounded-2xl`}>
+                  <div className={`cursor-pointer hover:border-[#ffffff80] duration-200 project transition-all border-[1px] border-[#222] h-64  backdrop-blur-lg flex flex-col justify-between rounded-2xl`}>
                       <div className="p-4 flex flex-col flex-start grow">
                         <p className="text-md md:text-xl pb-1  font-semibold text-white">{project.title}</p>
                         <p className=" place-items-center text-white  ring-1 ring-slate-100/10 rounded-xl font-mono px-2 pt-1  w-min text-xs">{project.lang}</p>
