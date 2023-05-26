@@ -68,14 +68,14 @@ export default function Navbar() {
         </div>
         <div className="gap-9 md:flex hidden">
           {routes.map((route, index) => {
-            return <Link key={index} className={`${route.link == '/' && section == 'home' ? 'text-white text-shadow' : 'text-gray-400'} ${route.link == "/#" + section ? 'text-white text-shadow' : 'text-gray-400'} transition-all duration-500 delay-[65ms]`} href={route.link}>{route.name}</Link>
+            return <Link key={index} className={`${route.link == '/' && section == 'home' ? 'text-white text-shadow' : 'text-gray-500'} ${route.link == "/#" + section ? 'text-white text-shadow' : 'text-gray-500'} transition-all duration-500 delay-[65ms]`} href={route.link}>{route.name}</Link>
           })}
         </div>
       </div>
       <div className={`${open ? 'block' : 'hidden'} w-[15px] h-[15px] bg-black  backdrop-blur border-l-[1px] border-t-[1px] border-slate-100/10 absolute right-10 top-[65px] z-[100] rotate-45`}></div>
       <div className={`${open ? 'block' : 'hidden'} bg-black  backdrop-blur absolute md:hidden  flex py-6 gap-6 px-9 flex-col text-left right-1 top-[73px] rounded-md ring-1 ring-slate-100/10  z-10`}>
         {routes.map((route, index) => {
-          return <Link key={index} className={`${route.link == '/' && section == 'home' ? 'text-white text-shadow' : 'text-gray-400'} ${route.link == "/#" + section ? 'text-white text-shadow' : 'text-gray-400'} duration-500 delay-[65ms]}
+          return <Link key={index} className={`${route.link == '/' && section == 'home' ? 'text-white text-shadow' : 'text-gray-500'} ${route.link == "/#" + section ? 'text-white text-shadow' : 'text-gray-500'} duration-500 delay-[65ms]}
           transition-all duration-200 hover:text-white`} href={route.link} onClick={() => setOpen(false)} >{route.name}</Link>
         })}
       </div>

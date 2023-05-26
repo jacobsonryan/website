@@ -31,7 +31,7 @@ export default function Projects() {
           {projects.map((project, index) => {
             return (
               <a href={project.view ? project.view : project.code} target="__blank" key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave()} >
-                <div className={`cursor-pointer hover:ring-slate-100/30 duration-200 project transition-all ring-1 ring-slate-100/10 h-64  backdrop-blur-lg flex flex-col justify-between rounded-2xl`}>
+                <div className={`cursor-pointer hover:border-[#ffffff80] duration-200 project transition-all border-[1px] border-[#222] h-64  backdrop-blur-lg flex flex-col justify-between rounded-2xl`}>
                     <div className="p-4 flex flex-col flex-start grow">
                       <p className="text-md md:text-xl pb-1  font-semibold text-white">{project.title}</p>
                       <p className=" place-items-center text-white  ring-1 ring-slate-100/10 rounded-xl font-mono px-2 pt-1  w-min text-xs">{project.lang}</p>

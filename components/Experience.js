@@ -29,9 +29,9 @@ export default function Experience() {
       <h2 className="mt-20 font- text-5xl font-extrabold align-left text-center mb-10 select-none"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Experience</span></h2>
       <p className="text-xs md:text-xs  text-center text-gray-400 tracking-widest  font-semibold uppercase mb-10">The positions I have worked in my career so far</p>
         <div className="absolute timeline w-screen">
-          <div class={` absolute w-3 h-3 bg-black  mt-[137.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#ffffff30] dark:bg-[black] hidden lg:block`}></div>
-          <div class={` absolute w-3 h-3 bg-black  mt-[412.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#ffffff30] dark:bg-[black] hidden lg:block`}></div>
-          <div class={` absolute w-3 h-3 bg-black  mt-[687.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#ffffff30] dark:bg-[black] hidden lg:block`}></div>
+          <div class={` absolute w-3 h-3 bg-black  mt-[137.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#333] dark:bg-[black] hidden lg:block`}></div>
+          <div class={` absolute w-3 h-3 bg-black  mt-[412.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#333] dark:bg-[black] hidden lg:block`}></div>
+          <div class={` absolute w-3 h-3 bg-black  mt-[687.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#333] dark:bg-[black] hidden lg:block`}></div>
         </div>
               {/* <div className="blob5"></div> */}
         <ol className="mb-40 ">
@@ -41,8 +41,8 @@ export default function Experience() {
               <div className={`sep absolute ${i == 2 ? 'top-[137.5px]' : 'top-0'} ${i == 0 ? ' h-[137.5px]' : ''} hidden sm:block`}></div>
               <div className={`sep2 absolute ${i !== 2 ? 'opacity-0' : 'opacity-1'}`}></div>
               <div className={`sep3 absolute ${i !== 0 ? 'opacity-0' : 'opacity-1'} hidden sm:block`}></div>
-                <li class={`bg-opacity-0 experience   backdrop-blur-lg bg-gray-800  ring-1 lg:w-[45%] w-full ring-slate-100/10 rounded-md sm:h-[275px] h-[200px] ${i == 1 ? 'sm:self-end' : 'sm:self start'} self-start`}>            
-                  <div className="flex gap-2 align-middle items-center border-b border-[#ffffff20] px-4">
+                <li class={`bg-opacity-0 experience   backdrop-blur-lg bg-gray-800   lg:w-[45%] w-full border-[1px] border-[#333333] rounded-[6px] sm:h-[275px] h-[200px] ${i == 1 ? 'sm:self-end' : 'sm:self start'} self-start`}>            
+                  <div className="flex gap-2 align-middle items-center border-b border-[#333333] px-4">
                     <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto">
                       <circle fill="#FF5F56" cx="5" cy="5" r="5"></circle>
                       <circle fill="#FFBD2E" cx="21" cy="5" r="5"></circle>
@@ -51,7 +51,7 @@ export default function Experience() {
                     <div className="flex">
                       {jobs.map((job, idx) => {
                         return (
-                            <code className={`cursor-pointer px-1 py-3  text-[8px] sm:text-xs sm:px-3   border-[1px] border-[#ffffff20] border-l-[#00000000] ${i == idx ? 'border-b-black' : 'border-b-[#ffffff00] '} ${job.id == 1 ? 'ml-2 border-l-[#ffffff20]' : ''} border-t-black relative top-[0.07em] flex justify-between gap-1 place-items-center`}>
+                            <code className={`cursor-pointer px-1 py-3  text-[8px] sm:text-xs sm:px-3   border-[1px] border-[#333] border-l-[#00000000] ${i == idx ? 'border-b-black' : 'border-b-[#333] '} ${job.id == 1 ? 'ml-2 border-l-[#333]' : ''} border-t-black relative top-[0.07em] flex justify-between gap-1 place-items-center`}>
                               <p className={`${i == idx ? 'text-white' : 'text-[#ffffff30]'}`}>job-{job.id}.js</p>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="w-3 h-3">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />

@@ -6,8 +6,8 @@ export default function Resume() {
       <h2 className="mt-20 select-none  text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Resume</span></h2>
       <p className="text-xs md:text-xs  tracking-widest  text-gray-400 text-center font-semibold uppercase mb-10">Learn more about my experience by downloading my resume</p>
       <div className="resume justify-center flex  ">
-        <div class={`bg-opacity-0  mb-10 experience h-[525px] backdrop-blur-lg bg-gray-800  ring-1 w-[600px]  ring-slate-100/10 rounded-md h-[445px] `}>            
-          <div className="flex gap-2 flex-row items-center  py-2 border-b border-slate-100/10">
+        <div class={`bg-opacity-0  mb-10 experience h-[525px] backdrop-blur-lg bg-gray-800  border-[1px] border-[#333] w-[600px]   rounded-[6px] h-[445px] `}>            
+          <div className="flex gap-2 flex-row items-center  py-2 border-b border-[#333]">
             <div className="h-2.5 w-1/3  stroke-slate-500/30 px-4">
             <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto">
               <circle fill="#FF5F56" cx="5" cy="5" r="5"></circle>
