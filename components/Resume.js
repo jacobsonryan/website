@@ -1,15 +1,15 @@
 export default function Resume() {
   return (
     <>
-    <div id="resume">
+    <section id="resume">
     <div id="resume-div" className="divider p-8"></div>
-      <h2 className="mt-20 font-  text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Resume</span></h2>
+      <h2 className="mt-20 select-none  text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Resume</span></h2>
       <p className="text-xs md:text-xs  tracking-widest  text-gray-400 text-center font-semibold uppercase mb-10">Learn more about my experience by downloading my resume</p>
       <div className="resume justify-center flex  ">
         <div class={`bg-opacity-0  mb-10 experience h-[525px] backdrop-blur-lg bg-gray-800  ring-1 w-[600px]  ring-slate-100/10 rounded-md h-[445px] `}>            
           <div className="flex gap-2 flex-row items-center  py-2 border-b border-slate-100/10">
             <div className="h-2.5 w-1/3  stroke-slate-500/30 px-4">
-            <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto  stroke-slate-500/30">
+            <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto">
               <circle fill="#FF5F56" cx="5" cy="5" r="5"></circle>
               <circle fill="#FFBD2E" cx="21" cy="5" r="5"></circle>
               <circle fill="#27C93F" cx="37" cy="5" r="5"></circle>
@@ -29,7 +29,7 @@ export default function Resume() {
           </div>
           <div className="px-4">
             <div className="px-4">
-              <h3 class="flex items-center my-4 text-sm lg:text-2xl text-md font-semibold text-slate-100">Resume</h3>
+              <h3 class="flex items-center my-4 text-sm lg:text-2xl text-md font-semibold text-slate-100">Ryan Jacobson</h3>
               <div className="flex flex-row">
                 <div className="w-3/4">
                   <div className="blank animated-background w-3/4 h-3 bg-gray-800 my-2 rounded"></div>
@@ -78,7 +78,7 @@ export default function Resume() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
     </>
   )
 }

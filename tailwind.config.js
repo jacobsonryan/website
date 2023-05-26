@@ -9,7 +9,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'text': '0 0 10px rgba(255, 255, 255, 1)', // Customize the shadow color and other properties as needed
+      },
+    },
     screens: {
       'xsm': '420',
       'sm': '640px',
@@ -19,5 +23,13 @@ module.exports = {
       '2xl': '1536px',
     }
   },
-  plugins: [],
+    plugins: [
+    function({ addUtilities }) {
+      addUtilities({
+        '.text-shadow': {
+          'text-shadow': '0 0 10px rgba(255, 255, 255, 1)', // Customize the shadow color and other properties as needed
+        },
+      }, ['responsive', 'hover', 'focus']);
+    },
+  ],
 }

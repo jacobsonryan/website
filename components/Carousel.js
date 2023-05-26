@@ -18,12 +18,12 @@ const icons = [
  // {  name: node, height: 60 },
  {  name: react, height: 55 },
  {  name: tailwind, height: 100 },
- {  name: cypress, height: 40 },
- {  name: vercel, height: 110 },
+ {  name: cypress, height: 35 },
+ {  name: vercel, height: 100 },
  {  name: auth0, height: 45 },
  {  name: prisma, height: 30 },
  {  name: git, height: 40 },
- {  name: heroku, height: 60 },
+ {  name: heroku, height: 55 },
 ]
 
 export default function Carousel() {

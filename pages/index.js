@@ -14,10 +14,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <section className="noisy h-screen w-screen flex items-center justify-center">
+        <section id="home" className="noisy h-screen w-screen flex items-center justify-center">
           <div className="text-lg lg: text-center w-[90%] md:w-[70%] lg:w-[80%] xl:w-[55%] mb-[150px] sm:mt-16 mt-32">
-              <h2 className="text-white align-center md:text-xl mb-10">Welcome to the <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">web portfolio </span>of</h2>
-              <h1 className="text-white text-6xl xs:text-8xl font-extrabold leading-none sm:whitespace-nowrap tracking-tight md:text-7xl lg:text-8xl ">Ryan
+              <h2 className="text-white align-center md:text-xl mb-10 select-none ">Welcome to the <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">web portfolio </span>of</h2>
+              <h1 className="text-white text-6xl xs:text-8xl font-extrabold leading-none sm:whitespace-nowrap tracking-tight md:text-7xl lg:text-8xl select-none">Ryan
               <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600"> Jacobson</span></h1>
               <div>
                 <p className="text-xs md:text-xs  text-center text-gray-400 tracking-widest  font-semibold uppercase mt-16">Scroll down to learn more about my skills & experiences</p>

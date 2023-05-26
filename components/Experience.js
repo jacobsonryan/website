@@ -24,9 +24,9 @@ export default function Experience() {
   ]
 
   return (
-    <div id="experience">
+    <section id="experience">
       <div className="divider p-8"></div>
-      <h2 className="mt-20 font- text-5xl font-extrabold align-left text-center mb-10"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Experience</span></h2>
+      <h2 className="mt-20 font- text-5xl font-extrabold align-left text-center mb-10 select-none"><span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600">Experience</span></h2>
       <p className="text-xs md:text-xs  text-center text-gray-400 tracking-widest  font-semibold uppercase mb-10">The positions I have worked in my career so far</p>
         <div className="absolute timeline w-screen">
           <div class={` absolute w-3 h-3 bg-black  mt-[137.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#ffffff30] dark:bg-[black] hidden lg:block`}></div>
@@ -43,7 +43,7 @@ export default function Experience() {
               <div className={`sep3 absolute ${i !== 0 ? 'opacity-0' : 'opacity-1'} hidden sm:block`}></div>
                 <li class={`bg-opacity-0 experience   backdrop-blur-lg bg-gray-800  ring-1 lg:w-[45%] w-full ring-slate-100/10 rounded-md sm:h-[275px] h-[200px] ${i == 1 ? 'sm:self-end' : 'sm:self start'} self-start`}>            
                   <div className="flex gap-2 align-middle items-center border-b border-[#ffffff20] px-4">
-                    <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto stroke-slate-500/30 ">
+                    <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto">
                       <circle fill="#FF5F56" cx="5" cy="5" r="5"></circle>
                       <circle fill="#FFBD2E" cx="21" cy="5" r="5"></circle>
                       <circle fill="#27C93F" cx="37" cy="5" r="5"></circle>
@@ -82,6 +82,6 @@ export default function Experience() {
             )
           }).reverse()}
         </ol>
-    </div>
+    </section>
   )
 }
