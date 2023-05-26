@@ -38,7 +38,7 @@ export default function Projects() {
                       <p className="pt-1 text-gray-400">{project.description}</p>
                     </div>
                     <div className="relative">
-                    <div className={`ring-1 ring-slate-100/20 absolute bottom-0 right-0 m-8 w-min p-2 rounded-full transition-all duration-300 ${hover == index ? 'sm:bg-[#111111] sm:rotate-[-40deg] sm:scale-125' : ''}`}>
+                    <div className={`ring-1 ring-slate-100/20 absolute bottom-0 right-0 m-8 w-min p-2 rounded-full transition-all duration-300 ${hover == index ? 'sm:bg-[#111111] sm:rotate-[-45deg] sm:scale-125' : ''}`}>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`w-5 h-5 duration-300 transition-all ${hover == index ? 'sm:scale-75' : ''}`}>
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                       </svg>
