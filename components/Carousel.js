@@ -4,7 +4,7 @@ import git from '../assets/git.svg'
 import html from '../assets/html.svg'
 import next from '../assets/next.svg'
 import react from '../assets/react.svg'
-import tailwind from '../assets/tailwindcss.svg'
+import tailwind from '../assets/tailwind.svg'
 import vercel from '../assets/vercel.svg'
 import node from '../assets/node.svg'
 import cypress from '../assets/cypress.svg'
@@ -13,17 +13,17 @@ import auth0 from '../assets/auth0.svg'
 import prisma from '../assets/prisma.svg'
 
 const icons = [
- {  name: html, height: 65 },
- {  name: next, height: 90 },
+ // {  name: html, height: 65 },
+ {  name: next, height: 95 },
  // {  name: node, height: 60 },
- {  name: react, height: 55 },
- {  name: tailwind, height: 100 },
- {  name: cypress, height: 35 },
- {  name: vercel, height: 100 },
- {  name: auth0, height: 45 },
- {  name: prisma, height: 30 },
- {  name: git, height: 40 },
- {  name: heroku, height: 55 },
+ {  name: react, height: 60 },
+ {  name: tailwind, height: 22 },
+ {  name: cypress, height: 40 },
+ {  name: vercel, height: 105 },
+ {  name: auth0, height: 50 },
+ {  name: git, height: 50 },
+ {  name: heroku, height: 60 },
+ {  name: prisma, height: 35 },
 ]
 
 export default function Carousel() {
@@ -39,7 +39,7 @@ export default function Carousel() {
         gradientColor={[0,0,0]}
       >
       {icons.map(icon => {
-        return <div className={`content  grayscale-[1] `}><Image draggable="false" src={icon.name} height={icon.height} /></div>
+        return <div className={`content opacity-[0.8]  grayscale-[1] `}><Image draggable="false" src={icon.name} height={icon.height} /></div>
       })}
       </Marquee>
     </div>
