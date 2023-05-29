@@ -11,6 +11,7 @@ import cypress from '../assets/cypress.svg'
 import heroku from '../assets/heroku.svg'
 import auth0 from '../assets/auth0.svg'
 import prisma from '../assets/prisma.svg'
+import supabase from '../assets/supabase.svg'
 
 const icons = [
  // {  name: html, height: 65 },
@@ -24,6 +25,7 @@ const icons = [
  {  name: git, height: 50 },
  {  name: heroku, height: 60 },
  {  name: prisma, height: 35 },
+ {  name: supabase, height: 30 },
 ]
 
 export default function Carousel() {
