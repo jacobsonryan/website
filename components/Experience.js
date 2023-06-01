@@ -43,10 +43,10 @@ export default function Experience() {
               <div className={`sep3 absolute ${i !== 0 ? 'opacity-0' : 'opacity-1'} hidden sm:block`}></div>
                 <li class={`bg-opacity-0 experience   backdrop-blur-lg bg-gray-800   lg:w-[45%] w-full border-[1px] border-[#333333] rounded-[6px] sm:h-[275px] h-[200px] ${i == 1 ? 'sm:self-end' : 'sm:self start'} self-start`}>            
                   <div className="flex gap-2 align-middle items-center border-b border-[#333333] px-4">
-                    <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto">
-                      <circle fill="#FF5F56" cx="5" cy="5" r="5"></circle>
-                      <circle fill="#FFBD2E" cx="21" cy="5" r="5"></circle>
-                      <circle fill="#27C93F" cx="37" cy="5" r="5"></circle>
+                    <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto overflow-visible">
+                      <circle fill="#FF5F56" cx="2" cy="5" r="6"></circle>
+                      <circle fill="#FFBD2E" cx="21" cy="5" r="6"></circle>
+                      <circle fill="#27C93F" cx="40" cy="5" r="6"></circle>
                     </svg>
                     <div className="flex">
                       {jobs.map((job, idx) => {

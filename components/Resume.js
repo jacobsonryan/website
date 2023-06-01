@@ -9,10 +9,10 @@ export default function Resume() {
         <div class={`bg-opacity-0  mb-10 experience h-[525px] backdrop-blur-lg bg-gray-800  border-[1px] border-[#333] w-[600px]   rounded-[6px] h-[445px] `}>            
           <div className="flex gap-2 flex-row items-center  py-2 border-b border-[#333]">
             <div className="h-2.5 w-1/3  stroke-slate-500/30 px-4">
-            <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto">
-              <circle fill="#FF5F56" cx="5" cy="5" r="5"></circle>
-              <circle fill="#FFBD2E" cx="21" cy="5" r="5"></circle>
-              <circle fill="#27C93F" cx="37" cy="5" r="5"></circle>
+            <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto overflow-visible">
+                      <circle fill="#FF5F56" cx="2" cy="5" r="6"></circle>
+                      <circle fill="#FFBD2E" cx="21" cy="5" r="6"></circle>
+                      <circle fill="#27C93F" cx="40" cy="5" r="6"></circle>
             </svg></div>
           <div className="url  bg-[#111111] h-7 w-[150px] lg:w-[250px] rounded-sm text-center flex justify-between items-center text-white text-xs px-2">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="12" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" className="w-4 h-4">
