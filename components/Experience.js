@@ -10,8 +10,12 @@ export default function Experience() {
 
   const jobs = [
     {
+      id: 4,
+      code: `const job = {\n \ttitle: "Software Developer",\n \tfrom: "July 2023",\n \tto: null, \n \tcompany: "KPA"\n}`
+    },
+    {
       id: 3,
-      code: `const job = {\n \ttitle: "Software Engineer II",\n \tfrom: "January 2023",\n \tto: null, \n \tcompany: "JP Morgan Chase"\n}`
+      code: `const job = {\n \ttitle: "Software Engineer II",\n \tfrom: "January 2023",\n \tto: "July 2023", \n \tcompany: "JP Morgan Chase"\n}`
     },
     {
       id: 2,
@@ -32,17 +36,18 @@ export default function Experience() {
           <div class={` absolute w-3 h-3 bg-black  mt-[137.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#333] dark:bg-[black] hidden lg:block`}></div>
           <div class={` absolute w-3 h-3 bg-black  mt-[412.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#333] dark:bg-[black] hidden lg:block`}></div>
           <div class={` absolute w-3 h-3 bg-black  mt-[687.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#333] dark:bg-[black] hidden lg:block`}></div>
+          <div class={` absolute w-3 h-3 bg-black  mt-[962.5px] rounded-full mt-1.5  z-[3] border-[2px] border-[#333] dark:bg-[black] hidden lg:block`}></div>
         </div>
               {/* <div className="blob5"></div> */}
         <ol className="mb-40 ">
           {jobs.map((job, i) => {
             return (
-              <div className="relative flex lg:flex-col flex-col justify-between my-4 md:my-4 lg:my-0">
-              <div className={`sep absolute ${i == 2 ? 'top-[137.5px]' : 'top-0'} ${i == 0 ? ' h-[137.5px]' : ''} hidden sm:block`}></div>
-              <div className={`sep2 absolute ${i !== 2 ? 'opacity-0' : 'opacity-1'}`}></div>
+              <div className="relative flex lg:flex-col flex-col justify-between my-4 md:my-4 lg:my-0 overflow-x-hidden">
+              <div className={`sep2 absolute ${i !== 3 ? 'opacity-0' : 'opacity-1'} hidden sm:block`}></div>
+              <div className={`sep absolute ${i == 3 ? 'top-[137.5px]' : 'top-0'} ${i == 0 ? ' h-[137.5px]' : ''} hidden sm:block`}></div>
               <div className={`sep3 absolute ${i !== 0 ? 'opacity-0' : 'opacity-1'} hidden sm:block`}></div>
-                <li class={`bg-opacity-0 experience   backdrop-blur-lg bg-gray-800   lg:w-[45%] w-full border-[1px] border-[#333333] rounded-[6px] sm:h-[275px] h-[200px] ${i == 1 ? 'sm:self-end' : 'sm:self start'} self-start`}>            
-                  <div className="flex gap-2 align-middle items-center border-b border-[#333333] px-4">
+                <li class={`bg-opacity-0 experience   backdrop-blur-lg bg-gray-800   lg:w-[45%] w-full border-[1px] border-[#333333] rounded-[6px] sm:h-[275px] h-[200px] ${i % 2 == 0 ? 'sm:self-end' : 'sm:self start'} self-start`}>            
+                  <div className="flex gap-2 align-middle items-center border-b border-[#333333] px-4 ">
                     <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" className="h-[8px] sm:h-2.5 w-auto overflow-visible">
                       <circle fill="#FF5F56" cx="2" cy="5" r="6"></circle>
                       <circle fill="#FFBD2E" cx="21" cy="5" r="6"></circle>
